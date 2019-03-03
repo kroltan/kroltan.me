@@ -11,7 +11,7 @@ export default () => (
         <h2>About</h2>
         <img src={me} alt="a young smiling me in grayscale, wearing a slightly worn t-shirt" />
         <p>
-            Hi! I'm Leonardo, a web developer who also makes games in his spare time.
+            Hi! I'm Leonardo, a game developer who also makes web things in his spare time.
             Maybe someday I'll make them full-time!
         </p>
         <p>
