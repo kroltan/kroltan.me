@@ -12,7 +12,6 @@ export default () => (
         <img src={me} alt="a young smiling me in grayscale, wearing a slightly worn t-shirt" />
         <p>
             Hi! I'm Leonardo, a game developer who also makes web things in his spare time.
-            Maybe someday I'll make them full-time!
         </p>
         <p>
             Currently I'm located in Florianópolis, Santa Catarina, Brazil, which is a
