@@ -1,0 +1,28 @@
+.root {
+}
+
+.value {
+    position: relative;
+    width: 20em;
+    padding: 2px;
+
+    background: rgba(0, 0, 0, 0.25);
+    background-clip: content-box;
+}
+
+.bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    margin: 5px;
+
+    background: currentColor;
+}
+
+@media print {
+    .bar {
+        background: unset;
+        box-shadow: inset 0 0 0 1000px black;
+    }
+}

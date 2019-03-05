@@ -12,8 +12,10 @@ const ContactValue = ({display, link}) => {
 export const ContactsTable = () => (
     <table className="minimal-center">
         <thead>
-            <td>Service</td>
-            <td>Alias</td>
+            <tr>
+                <td>Service</td>
+                <td>Alias</td>
+            </tr>
         </thead>
         <tbody>
             <StaticQuery
@@ -35,7 +37,7 @@ export const ContactsTable = () => (
                 render={({allAirtable}) => allAirtable.edges.map(({
                     node: {data: {service, display, link}}
                 }) => (
-                    <tr>
+                    <tr key={service}>
                         <td>{service}</td>
                         <td>
                             <ContactValue

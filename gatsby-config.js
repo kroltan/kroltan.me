@@ -1,7 +1,7 @@
 module.exports = {
     siteMetadata: {
         title: `Leonardo Giovanni Scur`,
-        description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+        description: ``,
         author: `@kroltan`,
     },
     plugins: [
@@ -45,7 +45,7 @@ module.exports = {
                         mapping: {
                             "content": "text/markdown"
                         },
-                        tableLinks: ["links"]
+                        tableLinks: ["links", "technologies"],
                     },
                     {
                         baseId: "appe0HhALnyweY9Xi",
@@ -57,6 +57,11 @@ module.exports = {
                         mapping: {
                             "description": "text/markdown"
                         },
+                        tableLinks: ["technologies"],
+                    },
+                    {
+                        baseId: "appe0HhALnyweY9Xi",
+                        tableName: "Technologies",
                     }
                 ]
             }

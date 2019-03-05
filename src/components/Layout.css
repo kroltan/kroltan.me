@@ -122,3 +122,24 @@ table td:not(:last-of-type) {
 img {
     align-self: center;
 }
+
+@media print {
+    html {
+        height: 99%;
+
+        color: black;
+        background: unset;
+    }
+
+    body {
+        max-width: unset;
+    }
+
+    h1::before, h2::before {
+        content: none;
+    }
+
+    nav, footer {
+        display: none;
+    }
+}

@@ -11,32 +11,32 @@ export default () => (
         <h2>Work History</h2>
         <StaticQuery
             query={graphql`
-                    {
-                        allAirtable(
-                            filter: {table: {eq:"WorkHistory"}},
-                            sort: {
-                                fields: [data___startYear],
-                                order: DESC
-                            }
-                        ) {
-                            edges {
-                                node {
-                                    data {
-                                        company
-                                        startYear
-                                        endYear
-                                        title
-                                        description {
-                                            childMarkdownRemark {
-                                                html
-                                            }
+                {
+                    allAirtable(
+                        filter: {table: {eq:"WorkHistory"}},
+                        sort: {
+                            fields: [data___startYear],
+                            order: DESC
+                        }
+                    ) {
+                        edges {
+                            node {
+                                data {
+                                    company
+                                    startYear
+                                    endYear
+                                    title
+                                    description {
+                                        childMarkdownRemark {
+                                            html
                                         }
                                     }
                                 }
                             }
                         }
                     }
-                `}
+                }
+            `}
             render={({allAirtable}) => allAirtable.edges.map(({node: {data: work, id}}) => (
                 <Article
                     key={id}
