@@ -1,6 +1,3 @@
-[submodule "static/talk/rx-presentation"]
-	path = static/talk/rx-presentation
-	url = git@github.com:kroltan/rx-presentation.git
 [submodule "static/talk/dotknows-rx"]
 	path = static/talk/dotknows-rx
-	url = git@github.com:kroltan/rx-presentation.git
+	url = https://github.com/kroltan/rx-presentation.git
