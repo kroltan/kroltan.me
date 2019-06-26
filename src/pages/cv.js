@@ -57,7 +57,9 @@ export default () => (
                         };
                     }
                 });
+
                 data.sort((a, b) => b.sort - a.sort);
+
                 return data.map(({title, aside, technologies}) => (
                     <Article
                         key={title}

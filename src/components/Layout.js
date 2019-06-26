@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from 'gatsby';
 import {Helmet} from "react-helmet";
 
-import favicon from "../images/me.jpg";
+import favicon from "../images/me.png";
 import './Layout.css';
 
 export const Layout = ({children}) => (

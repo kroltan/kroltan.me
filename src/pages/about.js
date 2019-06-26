@@ -3,7 +3,7 @@ import React from 'react';
 import {Layout} from '../components/Layout';
 import {Meta} from '../components/Meta';
 import {ContactsTable} from "../components/ContactsTable";
-import me from "../images/me.jpg";
+import me from "../images/me.png";
 
 export default () => (
     <Layout>
