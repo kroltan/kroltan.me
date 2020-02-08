@@ -30,7 +30,7 @@ a:hover {
     text-decoration-color: aquamarine;
 }
 
-a[href*=\/]:hover, a[href*=\#]:hover {
+a[href^=\/]:hover, a[href*=\#]:hover {
     text-decoration-color: orangered;
 }
 
@@ -121,6 +121,17 @@ table td:not(:last-of-type) {
 
 img {
     align-self: center;
+}
+
+.infobar {
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 1em;
+    justify-content: center;
+}
+
+.infobar b::after {
+    content: ": ";
 }
 
 @media print {

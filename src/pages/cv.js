@@ -3,7 +3,6 @@ import {StaticQuery, graphql} from "gatsby";
 
 import {Layout} from "../components/Layout";
 import {Meta} from "../components/Meta";
-import {TechnologySkillTable} from "../components/TechnologySkillTable";
 import {Article} from "../components/Article";
 import {PrintNotice} from "../components/PrintNotice";
 
@@ -11,11 +10,10 @@ export default () => (
     <Layout>
         <Meta title="Curriculum Vitae" keywords={[]}/>
         <PrintNotice />
-        <TechnologySkillTable />
         <StaticQuery
             query={graphql`
                     {
-                        allAirtable(filter: {table: {in: ["WorkHistory", "Projects"]}}) {
+                        log: allAirtable(filter: {table: {in: ["WorkHistory", "Projects"]}}) {
                             edges {
                                 node {
                                     data {
@@ -34,10 +32,23 @@ export default () => (
                                 }
                             }
                         }
+                        
+                        contact: allAirtable(filter: {table: {eq: "Contacts"}}) {
+                            edges {
+                                node {
+                                    data {
+                                        service
+                                        display
+                                        link
+                                        showOnCv
+                                    }
+                                }
+                            }
+                        }
                     }
                 `}
-            render={({allAirtable}) => {
-                const data = allAirtable.edges.map(({
+            render={({log, contact}) => {
+                const logData = log.edges.map(({
                     node: {data: {name, company, technologies, title, year, startYear, endYear}}
                 }) => {
                     const tech = technologies.map(({data: {name}}) => name);
@@ -58,22 +69,44 @@ export default () => (
                     }
                 });
 
-                data.sort((a, b) => b.sort - a.sort);
+                logData.sort((a, b) => b.sort - a.sort);
 
-                return data.map(({title, aside, technologies}) => (
+                const contactData = contact.edges
+                    .filter(({node: {data: {showOnCv}}}) => showOnCv)
+                    .map(({
+                        node: {data: {service, display, link}}
+                    }) => ({
+                        name: service,
+                        link: {
+                            text: display,
+                            url: link,
+                        },
+                    }));
+
+                return <>
+                  <div className="infobar">
+                    {contactData.map(({name, link: {text, url}}) => (
+                      <div>
+                        <b>{name}</b>
+                        <a href={url}>{text}</a>
+                      </div>
+                    ))}
+                  </div>
+                  {logData.map(({title, aside, technologies}) => (
                     <Article
-                        key={title}
-                        title={title}
-                        aside={aside}
-                        content={
-                            <>
-                                Technologies used:
-                                {" "}
-                                {technologies.join(", ")}
-                            </>
-                        }
+                      key={title}
+                      title={title}
+                      aside={aside}
+                      content={
+                        <>
+                          Technologies used:
+                          {" "}
+                          {technologies.join(", ")}
+                        </>
+                      }
                     />
-                ));
+                  ))}
+                </>
             }}
         />
     </Layout>
