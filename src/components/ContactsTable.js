@@ -6,7 +6,7 @@ const ContactValue = ({display, link}) => {
         return display;
     }
 
-    return <a href={link}>{display}</a>;
+    return <a rel="me" href={link}>{display}</a>;
 };
 
 export const ContactsTable = () => (
