@@ -6,7 +6,7 @@ const ContactValue = ({display, link}) => {
         return display;
     }
 
-    return <a rel="me" href={link}>{display}</a>;
+    return <a rel="me noopener noreferrer" href={link}>{display}</a>;
 };
 
 export const ContactsTable = () => (
@@ -21,7 +21,7 @@ export const ContactsTable = () => (
             <StaticQuery
                 query={graphql`
                     {
-                        allAirtable(filter: {table: {eq: "Contacts"}}) {
+                        allAirtable(filter: {table: {eq: "Contacts"}}, sort: {fields: data___service}) {
                             edges {
                                 node {
                                     data {

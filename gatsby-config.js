@@ -67,7 +67,20 @@ module.exports = {
                     {
                         baseId: "appe0HhALnyweY9Xi",
                         tableName: "Technologies",
-                    }
+                    },
+                    {
+                        baseId: "appe0HhALnyweY9Xi",
+                        tableName: "Blog",
+                        mapping: {
+                            "content": "text/markdown"
+                        },
+                        tableLinks: ["tags"]
+                    },
+                    {
+                        baseId: "appe0HhALnyweY9Xi",
+                        tableName: "Tags",
+                        tableLinks: ["posts"]
+                    },
                 ]
             }
         }

@@ -19,7 +19,6 @@ export default () => (
         </p>
         <p>
             If you need to talk to me, I'm available at a variety of services.
-            Don't expect an immediate response in instant messagers!
         </p>
         <ContactsTable />
     </Layout>

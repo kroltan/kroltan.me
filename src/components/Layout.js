@@ -1,11 +1,11 @@
-import React from 'react';
-import {Link} from 'gatsby';
+import React from "react";
+import {Link} from "gatsby";
 import {Helmet} from "react-helmet";
 
 import favicon from "../images/me.png";
 import './Layout.css';
 
-export const Layout = ({children}) => (
+export const Layout = ({children, complete = true}) => (
     <>
         <Helmet
             link={[
@@ -16,20 +16,29 @@ export const Layout = ({children}) => (
                 }
             ]}
         />
-        <header>
-            <h1>Leonardo Giovanni Scur</h1>
-            <nav role="navigation">
-                <Link to="/about">About</Link>
-                <Link to="/projects">Projects</Link>
-                <Link to="/work">Work</Link>
-                <Link to="/cv">CV</Link>
-            </nav>
-        </header>
+        {complete && (
+            <header>
+                <h1>Leonardo Giovanni Scur</h1>
+                <nav role="navigation">
+                    <Link to="/">Home</Link>
+                    <Link to="/blog">Blog</Link>
+                    <Link to="/projects">Projects</Link>
+                    <Link to="/work">Work</Link>
+                    <Link to="/cv">CV</Link>
+                </nav>
+            </header>
+        )}
         <main>
             {children}
         </main>
-        <footer id="footer" role="contentinfo">
-            &copy; Leonardo Giovanni Scur, {new Date().getUTCFullYear()}
-        </footer>
+        {complete && (
+            <footer id="footer" role="contentinfo">
+                &copy; Leonardo Giovanni Scur, 2019~{new Date().getUTCFullYear()}
+                <br/>
+                <small>
+                    Copyright reserved for content. Code snippets <Link to="/mit">MIT</Link> licensed, unless stated otherwise.
+                </small>
+            </footer>
+        )}
     </>
 );

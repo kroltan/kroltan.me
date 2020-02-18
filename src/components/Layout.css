@@ -12,8 +12,8 @@ html {
 }
 
 body {
-    max-width: 40rem;
-    flex-basis: 40rem;
+    max-width: 44rem;
+    flex-basis: 44rem;
 }
 
 a {
@@ -43,7 +43,7 @@ a:visited {
 }
 
 p, blockquote {
-    margin: 0 2em;
+    margin: 0 3em;
 }
 
 ul {
