@@ -73,7 +73,7 @@ export default () => {
                             <td><Link to={`/blog/${post.slug}`}>{post.title}</Link></td>
                             <td>{post.content.childMarkdownRemark.timeToRead}min</td>
                             <td>
-                                {post.tags.map(({data: tag}) => (
+                                {(post.tags || []).map(({data: tag}) => (
                                     <Link to={`/blog/tag/${tag.slug}`} key={tag.slug}>
                                         {tag.name}
                                     </Link>

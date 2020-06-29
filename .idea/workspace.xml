@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0a97862c-77db-46e4-af2d-ca8b964cf059" name="Default" comment="" />
+    <list default="true" id="0a97862c-77db-46e4-af2d-ca8b964cf059" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.prettierrc" beforeDir="false" afterPath="$PROJECT_DIR$/.prettierrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatsby-config.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/talk/dotknows-rx/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/lib/css/monokai.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/talk/dotknows-rx/lib/css/monokai.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Article.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Article.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Layout.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layout.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/blog/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/blog/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/post.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/post.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/talk/dotknows-rx" beforeDir="false" afterPath="$PROJECT_DIR$/static/talk/dotknows-rx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/talk/dotknows-rx/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/talk/dotknows-rx/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/talk/dotknows-rx/lib/css/monokai.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/talk/dotknows-rx/lib/css/monokai.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,18 +46,18 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/templates" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="HTML" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../help/memory-numbers-game" />
     <property name="node.js.detected.package.prettier" value="true" />
     <property name="node.js.path.for.package.prettier" value="project" />
     <property name="node.js.selected.package.prettier" value="E:\Projects\kroltan.me\node_modules\prettier" />
-    <property name="nodejs_interpreter_path" value="E:/Programs/nodejs/node" />
+    <property name="nodejs_interpreter_path" value="$PROJECT_DIR$/../../Programs/nodejs/node" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="C:/Program Files/nodejs/node" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="yarn" />
@@ -88,29 +104,37 @@
       <workItem from="1581257613082" duration="689000" />
       <workItem from="1581271505199" duration="1450000" />
       <workItem from="1581901704431" duration="9533000" />
+      <workItem from="1582063760164" duration="494000" />
+      <workItem from="1585334270470" duration="19000" />
+      <workItem from="1585845982447" duration="18821000" />
+      <workItem from="1586451377660" duration="1262000" />
+      <workItem from="1587925929459" duration="78000" />
+      <workItem from="1593387682410" duration="4096000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="-1149" y="128" key="FileChooserDialogImpl" timestamp="1581909003870">
+    <state x="-1149" y="128" key="FileChooserDialogImpl" timestamp="1587926004924">
       <screen x="-1858" y="-167" width="1858" height="1080" />
     </state>
-    <state x="-1149" y="128" key="FileChooserDialogImpl/62.0.1858.1080/-1858.-167.1858.1080@-1858.-167.1858.1080" timestamp="1581909003870" />
-    <state x="-1120" y="290" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1581906466106">
+    <state x="-1149" y="128" key="FileChooserDialogImpl/62.0.1858.1080/-1858.-167.1858.1080@-1858.-167.1858.1080" timestamp="1587926004924" />
+    <state x="-1120" y="290" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585850487444">
       <screen x="-1858" y="-167" width="1858" height="1080" />
     </state>
-    <state x="-1120" y="290" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/62.0.1858.1080/-1858.-167.1858.1080@-1858.-167.1858.1080" timestamp="1581906466106" />
-    <state x="-1227" y="105" width="606" height="536" key="find.popup" timestamp="1581909529692">
+    <state x="-1120" y="290" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/62.0.1858.1080/-1858.-167.1858.1080@-1858.-167.1858.1080" timestamp="1585850487444" />
+    <state x="-1227" y="105" width="606" height="536" key="find.popup" timestamp="1593390634861">
       <screen x="-1858" y="-167" width="1858" height="1080" />
     </state>
-    <state x="-1227" y="105" width="606" height="536" key="find.popup/62.0.1858.1080/-1858.-167.1858.1080@-1858.-167.1858.1080" timestamp="1581909529692" />
-    <state x="-1266" y="68" width="672" height="678" key="search.everywhere.popup" timestamp="1581909836903">
+    <state x="-1227" y="105" width="606" height="536" key="find.popup/62.0.1858.1080/-1858.-167.1858.1080@-1858.-167.1858.1080" timestamp="1585871515660" />
+    <state x="-1227" y="105" width="606" height="536" key="find.popup/65.0.1855.1080/-1858.-167.1858.1080@-1858.-167.1858.1080" timestamp="1593390634861" />
+    <state x="-1266" y="68" width="672" height="678" key="search.everywhere.popup" timestamp="1593390189929">
       <screen x="-1858" y="-167" width="1858" height="1080" />
     </state>
-    <state x="-1266" y="68" width="672" height="678" key="search.everywhere.popup/62.0.1858.1080/-1858.-167.1858.1080@-1858.-167.1858.1080" timestamp="1581909836903" />
+    <state x="-1266" y="68" width="672" height="678" key="search.everywhere.popup/62.0.1858.1080/-1858.-167.1858.1080@-1858.-167.1858.1080" timestamp="1585846166079" />
+    <state x="-1266" y="68" width="672" height="678" key="search.everywhere.popup/65.0.1855.1080/-1858.-167.1858.1080@-1858.-167.1858.1080" timestamp="1593390189929" />
   </component>
   <component name="masterDetails">
     <states>

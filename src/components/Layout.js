@@ -4,6 +4,7 @@ import {Helmet} from "react-helmet";
 
 import favicon from "../images/me.png";
 import './Layout.css';
+import './Layout.mermaid.css';
 
 export const Layout = ({children, complete = true}) => (
     <>

@@ -19,15 +19,41 @@ module.exports = {
         },
         `gatsby-transformer-sharp`,
         `gatsby-plugin-sharp`,
-        `gatsby-transformer-remark`,
+        {
+            resolve: `gatsby-transformer-remark`,
+            options: {
+                plugins: [
+                    {
+                        resolve: "gatsby-remark-katex",
+                        options: {
+                            trust: false,
+                            output: "mathml"
+                        }
+                    },
+                    {
+                        resolve: "gatsby-remark-mermaid",
+                        options: {
+                            theme: null,
+                            mermaidOptions: {
+                                htmlLabels: false,
+                                themeCSS: "",
+                                flowchart: {
+                                    htmlLabels: false
+                                }
+                            }
+                        },
+                    },
+                ],
+            },
+        },
         {
             resolve: `gatsby-plugin-manifest`,
             options: {
                 name: `gatsby-starter-default`,
                 short_name: `starter`,
                 start_url: `/`,
-                background_color: `#663399`,
-                theme_color: `#663399`,
+                background_color: `#272422`,
+                theme_color: `#ffffff`,
                 display: `minimal-ui`,
                 icon: `src/images/me.png`, // This path is relative to the root of the site.
             },
@@ -48,7 +74,7 @@ module.exports = {
                         baseId: "appe0HhALnyweY9Xi",
                         tableName: "Projects",
                         mapping: {
-                            "content": "text/markdown"
+                            "content": "text/markdown",
                         },
                         tableLinks: ["links", "technologies"],
                     },
@@ -60,7 +86,7 @@ module.exports = {
                         baseId: "appe0HhALnyweY9Xi",
                         tableName: "WorkHistory",
                         mapping: {
-                            "description": "text/markdown"
+                            "description": "text/markdown",
                         },
                         tableLinks: ["technologies"],
                     },
@@ -72,17 +98,17 @@ module.exports = {
                         baseId: "appe0HhALnyweY9Xi",
                         tableName: "Blog",
                         mapping: {
-                            "content": "text/markdown"
+                            "content": "text/markdown",
                         },
-                        tableLinks: ["tags"]
+                        tableLinks: ["tags"],
                     },
                     {
                         baseId: "appe0HhALnyweY9Xi",
                         tableName: "Tags",
-                        tableLinks: ["posts"]
+                        tableLinks: ["posts"],
                     },
-                ]
-            }
-        }
+                ],
+            },
+        },
     ],
 };

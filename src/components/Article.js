@@ -24,7 +24,7 @@ export const Article = ({title, aside, content}) => {
     return (
         <article>
             <header>
-                <h3>{title}</h3>
+                <h2>{title}</h2>
                 {aside}
             </header>
             {content}

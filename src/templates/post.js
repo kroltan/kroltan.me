@@ -32,7 +32,7 @@ export default ({data: {airtable: {data: post}}}) => {
             <Meta
                 title={post.title}
                 description={post.content.childMarkdownRemark.excerpt}
-                keywords={post.tags.map(tag => tag.data.name)}
+                keywords={(post.tags || []).map(tag => tag.data.name)}
             />
             <Article
                 title={post.title}
