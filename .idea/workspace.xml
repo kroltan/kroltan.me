@@ -2,21 +2,136 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0a97862c-77db-46e4-af2d-ca8b964cf059" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.prettierrc" beforeDir="false" afterPath="$PROJECT_DIR$/.prettierrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gatsby-config.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/talk/dotknows-rx/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/lib/css/monokai.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/talk/dotknows-rx/lib/css/monokai.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Article.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Article.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Layout.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layout.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/blog/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/blog/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/post.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/post.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/talk/dotknows-rx" beforeDir="false" afterPath="$PROJECT_DIR$/static/talk/dotknows-rx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/talk/dotknows-rx/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/talk/dotknows-rx/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/talk/dotknows-rx/lib/css/monokai.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/talk/dotknows-rx/lib/css/monokai.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/.travis.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/CONTRIBUTING.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/bower.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/css/feedback.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/css/print/paper.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/css/print/pdf.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/css/reset.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/css/reveal.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/css/reveal.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/css/theme/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/css/theme/beige.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/css/theme/black.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/css/theme/blood.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/css/theme/league.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/css/theme/moon.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/css/theme/night.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/css/theme/serif.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/css/theme/simple.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/css/theme/sky.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/css/theme/solarized.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/css/theme/source/beige.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/css/theme/source/black.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/css/theme/source/blood.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/css/theme/source/league.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/css/theme/source/moon.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/css/theme/source/night.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/css/theme/source/serif.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/css/theme/source/simple.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/css/theme/source/sky.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/css/theme/source/solarized.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/css/theme/source/white.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/css/theme/template/mixins.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/css/theme/template/settings.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/css/theme/template/theme.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/css/theme/white.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/demo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/examples/add-to-list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/examples/base.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/examples/promise.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/examples/rx-clicker/cookie.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/examples/rx-clicker/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/gruntfile.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/js/reveal.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/lib/css/atom-one-dark-reasonable.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/lib/css/monokai.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/lib/css/prism.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/lib/css/zenburn.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/lib/font/league-gothic/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/lib/font/league-gothic/league-gothic.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/lib/font/league-gothic/league-gothic.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/lib/font/league-gothic/league-gothic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/lib/font/league-gothic/league-gothic.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/lib/font/source-sans-pro/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/lib/font/source-sans-pro/source-sans-pro-italic.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/lib/font/source-sans-pro/source-sans-pro-italic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/lib/font/source-sans-pro/source-sans-pro-italic.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/lib/font/source-sans-pro/source-sans-pro-regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/lib/font/source-sans-pro/source-sans-pro-regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/lib/font/source-sans-pro/source-sans-pro-regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/lib/font/source-sans-pro/source-sans-pro-semibold.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/lib/font/source-sans-pro/source-sans-pro-semibold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/lib/font/source-sans-pro/source-sans-pro-semibold.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/lib/font/source-sans-pro/source-sans-pro-semibolditalic.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/lib/font/source-sans-pro/source-sans-pro-semibolditalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/lib/font/source-sans-pro/source-sans-pro-semibolditalic.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/lib/font/source-sans-pro/source-sans-pro.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/lib/js/html5shiv.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/lib/js/prism.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/lib/js/promise.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/plugin/autosnippet/autosnippet.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/plugin/highlight/highlight.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/plugin/markdown/example.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/plugin/markdown/example.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/plugin/markdown/markdown.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/plugin/markdown/marked.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/plugin/math/math.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/plugin/multiplex/client.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/plugin/multiplex/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/plugin/multiplex/master.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/plugin/multiplex/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/plugin/notes-server/client.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/plugin/notes-server/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/plugin/notes-server/notes.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/plugin/notes/notes.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/plugin/notes/notes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/plugin/print-pdf/print-pdf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/plugin/search/search.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/plugin/zoom-js/zoom.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/test/assets/external-script-a.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/test/assets/external-script-b.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/test/assets/external-script-c.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/test/assets/external-script-d.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/test/examples/assets/beeping.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/test/examples/assets/beeping.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/test/examples/assets/image1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/test/examples/assets/image2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/test/examples/barebones.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/test/examples/embedded-media.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/test/examples/math.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/test/examples/slide-backgrounds.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/test/examples/slide-transitions.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/test/qunit-2.5.0.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/test/qunit-2.5.0.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/test/simple.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/test/test-dependencies-async.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/test/test-dependencies.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/test/test-grid-navigation.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/test/test-iframes.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/test/test-markdown-element-attributes.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/test/test-markdown-element-attributes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/test/test-markdown-external.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/test/test-markdown-external.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/test/test-markdown-options.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/test/test-markdown-options.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/test/test-markdown-slide-attributes.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/test/test-markdown-slide-attributes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/test/test-markdown.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/test/test-markdown.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/test/test-pdf.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/test/test-pdf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/test/test-plugins.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/test/test-state.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/test/test.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/talk/dotknows-rx/test/test.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +168,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="HTML" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../help/memory-numbers-game" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../dsl-presentation" />
     <property name="node.js.detected.package.prettier" value="true" />
     <property name="node.js.path.for.package.prettier" value="project" />
     <property name="node.js.selected.package.prettier" value="E:\Projects\kroltan.me\node_modules\prettier" />
@@ -65,12 +180,13 @@
     <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\Projects\kroltan.me\src" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Projects\kroltan.me\src\templates" />
       <recent name="E:\Projects\kroltan.me\src\components" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Projects\kroltan.me" />
+      <recent name="E:\Projects\kroltan.me\src" />
     </key>
   </component>
   <component name="RustProjectSettings">
@@ -117,10 +233,11 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="-1149" y="128" key="FileChooserDialogImpl" timestamp="1587926004924">
+    <state x="-1149" y="128" key="FileChooserDialogImpl" timestamp="1593969256180">
       <screen x="-1858" y="-167" width="1858" height="1080" />
     </state>
     <state x="-1149" y="128" key="FileChooserDialogImpl/62.0.1858.1080/-1858.-167.1858.1080@-1858.-167.1858.1080" timestamp="1587926004924" />
+    <state x="-1149" y="128" key="FileChooserDialogImpl/65.0.1855.1080/-1858.-167.1858.1080@-1858.-167.1858.1080" timestamp="1593969256180" />
     <state x="-1120" y="290" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585850487444">
       <screen x="-1858" y="-167" width="1858" height="1080" />
     </state>
