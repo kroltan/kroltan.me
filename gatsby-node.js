@@ -5,17 +5,7 @@
  */
 
 exports.createPages = async function({ actions, graphql }) {
-    const { data: { posts, tags, drafts } } = await graphql(`{
-        drafts: allFile(filter: {sourceInstanceName: {eq: "drafts"}}) {
-            nodes {
-                name
-                childMarkdownRemark {
-                    html
-                    excerpt
-                    timeToRead
-                }
-            }
-        }
+    const { data: { posts, tags } } = await graphql(`{
         posts: allAirtable(filter: {table: {eq: "Blog"}}) {
             nodes {
                 data {
@@ -53,20 +43,35 @@ exports.createPages = async function({ actions, graphql }) {
         }
     }`);
 
-    drafts.nodes.forEach(draft => {
-        actions.createPage({
-            path: `/blog/${draft.name}`,
-            component: require.resolve("./src/templates/post.js"),
-            context: {
-                title: draft.name,
-                slug: draft.name,
-                tags: [],
-                content: {
-                    childMarkdownRemark: draft.childMarkdownRemark,
-                },
+    if (process.env.NODE_ENV !== "production") {
+        const { data: { drafts } } = await graphql(`{
+            drafts: allFile(filter: {sourceInstanceName: {eq: "drafts"}}) {
+                nodes {
+                    name
+                    childMarkdownRemark {
+                        html
+                        excerpt
+                        timeToRead
+                    }
+                }
             }
+        }`);
+
+        drafts.nodes.forEach(draft => {
+            actions.createPage({
+                path: `/blog/${draft.name}`,
+                component: require.resolve("./src/templates/post.js"),
+                context: {
+                    title: draft.name,
+                    slug: draft.name,
+                    tags: [],
+                    content: {
+                        childMarkdownRemark: draft.childMarkdownRemark,
+                    },
+                },
+            });
         });
-    })
+    }
 
     posts.nodes.forEach(({ data: post }) => {
         actions.createPage({

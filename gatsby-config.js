@@ -17,13 +17,6 @@ module.exports = {
                 path: `${__dirname}/src/images`,
             },
         },
-        {
-            resolve: `gatsby-source-filesystem`,
-            options: {
-                name: `drafts`,
-                path: `${__dirname}/drafts`,
-            },
-        },
         `gatsby-transformer-sharp`,
         `gatsby-plugin-sharp`,
         {
@@ -119,3 +112,13 @@ module.exports = {
         },
     ],
 };
+
+if (process.env.NODE_ENV !== "production") {
+    module.exports.plugins.push({
+        resolve: `gatsby-source-filesystem`,
+        options: {
+            name: `drafts`,
+            path: `${__dirname}/drafts`,
+        },
+    });
+}
