@@ -164,6 +164,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -178,6 +179,7 @@
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="prettierjs.PrettierConfiguration.Package" value="E:\Projects\kroltan.me\node_modules\prettier" />
     <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
+    <property name="ts.external.directory.path" value="C:\Users\kroltan\AppData\Local\JetBrains\Toolbox\apps\WebStorm\ch-0\201.7223.93\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -226,6 +228,12 @@
       <workItem from="1586451377660" duration="1262000" />
       <workItem from="1587925929459" duration="78000" />
       <workItem from="1593387682410" duration="4386000" />
+      <workItem from="1594237755752" duration="403000" />
+      <workItem from="1602081368570" duration="613000" />
+      <workItem from="1602197416868" duration="323000" />
+      <workItem from="1607613259643" duration="75000" />
+      <workItem from="1608155026776" duration="110000" />
+      <workItem from="1610129003753" duration="6404000" />
     </task>
     <servers />
   </component>
@@ -233,25 +241,22 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="-1149" y="128" key="FileChooserDialogImpl" timestamp="1593969256180">
+    <state x="-1157" y="174" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1610131193582">
       <screen x="-1858" y="-167" width="1858" height="1080" />
     </state>
-    <state x="-1149" y="128" key="FileChooserDialogImpl/62.0.1858.1080/-1858.-167.1858.1080@-1858.-167.1858.1080" timestamp="1587926004924" />
-    <state x="-1149" y="128" key="FileChooserDialogImpl/65.0.1855.1080/-1858.-167.1858.1080@-1858.-167.1858.1080" timestamp="1593969256180" />
-    <state x="-1120" y="290" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585850487444">
+    <state x="-1157" y="174" key="#com.intellij.fileTypes.FileTypeChooser/65.0.1855.1080/-1858.-167.1858.1080@-1858.-167.1858.1080" timestamp="1610131193582" />
+    <state x="-1222" y="106" width="585" height="534" key="find.popup" timestamp="1610136360900">
       <screen x="-1858" y="-167" width="1858" height="1080" />
     </state>
-    <state x="-1120" y="290" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/62.0.1858.1080/-1858.-167.1858.1080@-1858.-167.1858.1080" timestamp="1585850487444" />
-    <state x="-1227" y="105" width="606" height="536" key="find.popup" timestamp="1593390634861">
+    <state x="-1222" y="106" width="585" height="534" key="find.popup/65.0.1855.1080/-1858.-167.1858.1080@-1858.-167.1858.1080" timestamp="1610136360900" />
+    <state x="-1273" y="167" key="run.anything.popup" timestamp="1610135292455">
       <screen x="-1858" y="-167" width="1858" height="1080" />
     </state>
-    <state x="-1227" y="105" width="606" height="536" key="find.popup/62.0.1858.1080/-1858.-167.1858.1080@-1858.-167.1858.1080" timestamp="1585871515660" />
-    <state x="-1227" y="105" width="606" height="536" key="find.popup/65.0.1855.1080/-1858.-167.1858.1080@-1858.-167.1858.1080" timestamp="1593390634861" />
-    <state x="-1266" y="68" width="672" height="678" key="search.everywhere.popup" timestamp="1593390189929">
+    <state x="-1273" y="167" key="run.anything.popup/65.0.1855.1080/-1858.-167.1858.1080@-1858.-167.1858.1080" timestamp="1610135292455" />
+    <state x="-1266" y="68" width="672" height="678" key="search.everywhere.popup" timestamp="1610131669093">
       <screen x="-1858" y="-167" width="1858" height="1080" />
     </state>
-    <state x="-1266" y="68" width="672" height="678" key="search.everywhere.popup/62.0.1858.1080/-1858.-167.1858.1080@-1858.-167.1858.1080" timestamp="1585846166079" />
-    <state x="-1266" y="68" width="672" height="678" key="search.everywhere.popup/65.0.1855.1080/-1858.-167.1858.1080@-1858.-167.1858.1080" timestamp="1593390189929" />
+    <state x="-1266" y="68" width="672" height="678" key="search.everywhere.popup/65.0.1855.1080/-1858.-167.1858.1080@-1858.-167.1858.1080" timestamp="1610131669093" />
   </component>
   <component name="masterDetails">
     <states>

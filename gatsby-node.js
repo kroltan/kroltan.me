@@ -4,9 +4,18 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
-// You can delete this file if you're not using it
-exports.createPages = async function({actions, graphql}) {
-    const {data: {posts, tags}} = await graphql(`{
+exports.createPages = async function({ actions, graphql }) {
+    const { data: { posts, tags, drafts } } = await graphql(`{
+        drafts: allFile(filter: {sourceInstanceName: {eq: "drafts"}}) {
+            nodes {
+                name
+                childMarkdownRemark {
+                    html
+                    excerpt
+                    timeToRead
+                }
+            }
+        }
         posts: allAirtable(filter: {table: {eq: "Blog"}}) {
             nodes {
                 data {
@@ -21,6 +30,7 @@ exports.createPages = async function({actions, graphql}) {
                     content {
                         childMarkdownRemark {
                             html
+                            excerpt
                             timeToRead
                         }
                     }
@@ -43,21 +53,34 @@ exports.createPages = async function({actions, graphql}) {
         }
     }`);
 
-    posts.nodes.forEach(({data: post}) => {
+    drafts.nodes.forEach(draft => {
+        actions.createPage({
+            path: `/blog/${draft.name}`,
+            component: require.resolve("./src/templates/post.js"),
+            context: {
+                title: draft.name,
+                slug: draft.name,
+                tags: [],
+                content: {
+                    childMarkdownRemark: draft.childMarkdownRemark,
+                },
+            }
+        });
+    })
+
+    posts.nodes.forEach(({ data: post }) => {
         actions.createPage({
             path: `/blog/${post.slug}`,
             component: require.resolve("./src/templates/post.js"),
-            context: {
-                slug: post.slug
-            }
+            context: post,
         });
     });
 
-    tags.nodes.forEach(({data: tag}) => {
+    tags.nodes.forEach(({ data: tag }) => {
         actions.createPage({
             path: `/blog/tag/${tag.slug}`,
             component: require.resolve("./src/templates/tag.js"),
-            context: tag
-        })
+            context: tag,
+        });
     });
 };

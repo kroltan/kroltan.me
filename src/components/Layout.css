@@ -57,6 +57,7 @@ ul, ol {
 
 li {
     margin-left: inherit;
+    margin-bottom: 0.5em;
 }
 
 blockquote {
