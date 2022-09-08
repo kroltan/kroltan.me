@@ -5,9 +5,20 @@
     <meta charset="UTF-8">
     <title>Leonardo Giovanni Scur</title>
     <link rel="stylesheet" href="theme.css">
-
+    <script src="pretty.js" async></script>
+    <script>
+        const backgroundFragmentSource = fetch("assets/background.frag")
+            .then(response => response.text());
+        
+        async function onPrettyReady() {
+            const background = document.getElementById("background");
+            makePretty(await backgroundFragmentSource, background);
+            background.classList.add("loaded");
+        }
+    </script>
 </head>
 <body>
+<canvas id="background"></canvas>
 <div id="about">
     <img
             src="assets/me.png"
@@ -59,27 +70,27 @@
     <section class="gallery">
         <a href="#wizsnooks">
             <h3>Wizsnooks</h3>
-            <img src="assets/wizsnooks.png" alt=""/>
+            <img src="assets/wizsnooks.png" alt="" loading="lazy"/>
         </a>
         <a href="#farmfortress">
             <h3>Farm Fortress</h3>
-            <img src="assets/farmfortress.png" alt=""/>
+            <img src="assets/farmfortress.png" alt="" loading="lazy"/>
         </a>
         <a href="#wooficechair">
             <h3>Woofice Chair</h3>
-            <img src="assets/wooficechair.png" alt=""/>
+            <img src="assets/wooficechair.png" alt="" loading="lazy"/>
         </a>
         <a href="#joulethief">
             <h3>JouleThief</h3>
-            <img src="assets/joulethief.png" alt=""/>
+            <img src="assets/joulethief.png" alt="" loading="lazy"/>
         </a>
         <a href="#supersellout">
             <h3>Super Sellout</h3>
-            <img src="assets/supersellout.png" alt=""/>
+            <img src="assets/supersellout.png" alt="" loading="lazy"/>
         </a>
         <a href="#troposphir">
             <h3>Troposphir</h3>
-            <img src="assets/troposphir.png" alt=""/>
+            <img src="assets/troposphir.png" alt="" loading="lazy"/>
         </a>
     </section>
     <h2>Work Experience</h2>

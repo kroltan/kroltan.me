@@ -36,6 +36,23 @@ h2:not(:first-of-type) {
     margin-top: 1.5cm;
 }
 
+#background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1000;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+#background.loaded {
+    opacity: 0.5;
+}
+
 #about {
     width: 7cm;
     flex-shrink: 0;
@@ -127,6 +144,10 @@ article > * {
 
     a:visited {
         color: darkorchid;
+    }
+    
+    #background {
+        filter: invert(100%);
     }
 }
 
