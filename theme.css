@@ -227,7 +227,13 @@ article > * {
     }
     
     .summary {
-        display: initial;
+        display: block;
+    }
+    
+    aside.summary {
+        padding: 0.25cm;
+        margin: 0.5cm auto;
+        border: 1px solid currentColor;
     }
     
     h1,  h3, p, .extra {
