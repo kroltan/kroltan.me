@@ -1,5 +1,5 @@
 /**
- * @param {string} shaderUrl
+ * @param {string} fragmentShaderSource
  * @param {HTMLCanvasElement} target
  */
 function makePretty(fragmentShaderSource, target) {
