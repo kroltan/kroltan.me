@@ -1,0 +1,69 @@
+:root {
+    --monochrome-blend-mode: unset;
+}
+
+* {
+    background: none !important;
+    box-shadow: none !important;
+}
+
+body {
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    font-size: 10pt;
+    line-height: 1.3;
+}
+
+#background {
+    display: none;
+}
+
+#about {
+    position: initial;
+    display: grid;
+    gap: 0 1cm;
+    grid:
+            "bla contact"
+            "bla contact";
+    width: unset;
+    padding: 0;
+}
+
+#about p {
+    display: none;
+}
+
+#about table {
+    grid-area: contact;
+}
+
+.gallery {
+    display: none !important;
+}
+
+section {
+    display: initial !important;
+}
+
+article > :not(h3, .extra, .summary) {
+    display: none;
+}
+
+.summary {
+    display: block;
+}
+
+aside.summary {
+    padding: 0.25cm;
+    margin: 0.5cm auto;
+    border: 1px solid currentColor;
+}
+
+h1, h3, p, .extra {
+    margin: 0 !important;
+}
+
+article {
+    padding: 0.2cm;
+}

@@ -126,28 +126,6 @@ article > * {
     display: none;
 }
 
-@media screen and (prefers-color-scheme: dark) {
-    :root {
-        --main-background: rgb(26, 25, 24);
-        --nav-background: rgb(40, 38, 38);
-        --monochrome-blend-mode: lighten;
-        color: white;
-    }
-
-    a {
-        color: cornflowerblue;
-        text-shadow: 0 0 1px gray(0.8);
-    }
-
-    a:visited {
-        color: darkorchid;
-    }
-
-    #background {
-        filter: invert(100%);
-    }
-}
-
 @media screen and (max-width: 31cm) {
     body {
         flex-direction: column;
@@ -191,66 +169,8 @@ article > * {
     }
 }
 
-@media print {
-    * {
-        background: none !important;
-        box-shadow: none !important;
-    }
-
-    body {
-        flex-direction: column;
-        align-items: center;
-        margin: 0 auto;
-        font-size: 10pt;
-        line-height: 1.3;
-    }
-
-    #about {
-        position: initial;
-        display: grid;
-        gap: 0 1cm;
-        grid:
-            "bla contact"
-            "bla contact";
-        width: unset;
-        padding: 0;
-    }
-
-    #about p {
+@media screen and (prefers-contrast: high) {
+    #background {
         display: none;
-    }
-
-    #about table {
-        grid-area: contact;
-    }
-
-    .gallery {
-        display: none !important;
-    }
-
-    section {
-        display: initial !important;
-    }
-
-    article > :not(h3, .extra, .summary) {
-        display: none;
-    }
-
-    .summary {
-        display: block;
-    }
-
-    aside.summary {
-        padding: 0.25cm;
-        margin: 0.5cm auto;
-        border: 1px solid currentColor;
-    }
-
-    h1, h3, p, .extra {
-        margin: 0 !important;
-    }
-
-    article {
-        padding: 0.2cm;
     }
 }

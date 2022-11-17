@@ -1,0 +1,25 @@
+:root {
+    --main-background: red;
+    --nav-background: yellow;
+    color: var(--nav-background);
+}
+
+#about {
+    color: var(--main-background);
+}
+
+main::before {
+    content: "Gorgeous, isn't it? But seriously, tell me how you got yourself in this situation.";
+    animation: 1s infinite hotdog-banner;
+    font-weight: bold;
+}
+
+@keyframes hotdog-banner {
+    0% {
+        filter: hue-rotate(0);
+    }
+    
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
