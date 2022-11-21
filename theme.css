@@ -58,6 +58,7 @@ h2:not(:first-of-type) {
     position: sticky;
     top: 0;
     mix-blend-mode: var(--monochrome-blend-mode);
+    align-self: start;
 }
 
 main {
@@ -136,6 +137,7 @@ article > * {
     #about {
         position: relative;
         width: unset;
+        align-self: unset;
     }
 
     #about::before {
