@@ -28,7 +28,7 @@
             alt="Monochromatic photo of a caucasian male in his early twenties, slightly overweight, shoulder-length hair tied at the back, wearing slightly crooked square-framed glasses and a black T-shirt upon an empty background"
     />
     <h1>Leonardo Giovanni Scur</h1>
-    <p>Hi! I'm Leonardo, a game developer who also makes web things in his spare time.</p>
+    <p>Hi! I'm Leonardo, a game programmer who also makes web things in his spare time.</p>
     <table>
         <thead>
         <tr>
@@ -71,51 +71,64 @@
 
 <main>
     <section class="gallery">
+        <a href="#afterverse" class="emphasis">
+            <img src="assets/pkxd.png" alt="PK XD" loading="lazy"/>
+        </a>
         <a href="#wizsnooks">
-            <h3>Wizsnooks</h3>
-            <img src="assets/wizsnooks.png" alt="" loading="lazy"/>
+            <img src="assets/wizsnooks.png" alt="Wizsnooks" loading="lazy"/>
         </a>
         <a href="#farmfortress">
-            <h3>Farm Fortress</h3>
-            <img src="assets/farmfortress.png" alt="" loading="lazy"/>
+            <img src="assets/farmfortress.png" alt="Farm Fortress 2" loading="lazy"/>
         </a>
         <a href="#wooficechair">
-            <h3>Woofice Chair</h3>
-            <img src="assets/wooficechair.png" alt="" loading="lazy"/>
+            <img src="assets/wooficechair.png" alt="Woofice Chair!" loading="lazy"/>
         </a>
         <a href="#joulethief">
-            <h3>JouleThief</h3>
-            <img src="assets/joulethief.png" alt="" loading="lazy"/>
+            <img src="assets/joulethief.png" alt="Joule Thief" loading="lazy"/>
         </a>
         <a href="#supersellout">
-            <h3>Super Sellout</h3>
-            <img src="assets/supersellout.png" alt="" loading="lazy"/>
+            <img src="assets/supersellout.png" alt="Super Sellout" loading="lazy"/>
         </a>
         <a href="#troposphir">
-            <h3>Troposphir</h3>
-            <img src="assets/troposphir.png" alt="" loading="lazy"/>
+            <img src="assets/troposphir.png" alt="Troposphir" loading="lazy"/>
         </a>
     </section>
-    <aside class="summary">This is just a handy summary! More details at <a href="https://kroltan.me">kroltan.me</a></aside>
+    <aside class="summary">This is just a handy summary! More details at <a href="https://kroltan.me">kroltan.me</a>
+    </aside>
     <h2>Work Experience</h2>
     <section class="work">
         <article id="afterverse">
-            <h3>Game Developer at Afterverse</h3>
-            <div class="extra">Since 2021</div>
-            <p class="summary">Mobile game development on a large team, mostly Unity and C#, some Kotlin.</p>
+            <h3>Game Software Engineer at Afterverse</h3>
+            <div class="extra">2021 to 2023</div>
+            <p class="summary">Mobile multiplayer game programming on a large team, mostly Unity and C#, some
+                Kotlin.</p>
             <p>
                 Development of user-facing and internal features for PK XD (<a
                     href="https://play.google.com/store/apps/details?id=com.movile.playkids.pkxd">Android</a>, <a
                     href="https://apps.apple.com/us/app/pk-xd-explore-the-universe/id1449842729">iOS</a>, <a
-                    href="https://playpkxd.com/">Desktop</a>)
+                    href="https://playpkxd.com/">Desktop</a>),
+                a 3D multiplayer social game for kids (think Club Penguin styled after The Jetsons) with >100 million
+                downloads. Some of my work on it:
+            </p>
+            <ul>
+                <li>Marking backpack items as favorites for easier access to preferred items;</li>
+                <li>Health, score and respawn logic for shooter-based UGC games, from networking, to gameplay, and UI;
+                </li>
+                <li>
+                    Significant performance and architectural improvements to the usage of Addressables for loading
+                    of player-created houses and games;
+                </li>
+            </ul>
+            <p>
+                I worked mainly with C# on the Unity game client, but would sometimes dip into the server-side Protobuf
+                and Kotlin code when needed. Also worked on the software architecture, fundamental features and tooling
+                for unannounced projects.
             </p>
             <p>
-                Working as individual contributor in development, implementing user-facing as well as structural
-                features for other developers in the Unity3D game client.
-            </p>
-            <p>
-                Developing multiplayer games using an in-house Protobuf-based network communication, mainly using C# on
-                the client-side, but with some server-side Kotlin work.
+                Built an ECS-inspired architecture to standardize the local access as well as network synchronization of
+                interactive game objects for an unnanounced project, allowing for faster development of networked
+                gameplay features. Using said architecture, implemented an object picking menu for touchscreen interactions
+                between player and world in third-person.
             </p>
         </article>
         <article id="dotdg">
@@ -124,16 +137,27 @@
             <p class="summary">Varied educational and corporate game development on a small team using Unity.</p>
             <p>
                 Design, planning, and development of educational games, corporate training games, and simulators in
-                Unity3D.
+                Unity.
             </p>
             <p>
                 Worked on a variety of projects that used various unconventional technologies such as virtual,
-                augmented,
-                and mixed reality, as well as targeting mobile and web platforms.
+                augmented, and mixed reality, as well as targeting mobile and web platforms.
             </p>
+            <ul>
+                <li>A VR harvesting combine simulator, with an accurate replica of a real machine's control panel and
+                    harvesting process. The goal was to offer a practice environment for new operators;
+                </li>
+                <li>Web-based games for embedding into e-learning platforms. Both low-spec 3D as well as 2D games;</li>
+                <li>Various quiz style games for mobile and web, such as <a
+                        href="https://play.google.com/store/apps/details?id=br.com.sistemafaeg.agrinho">Programa
+                    Agrinho</a>, a fully-offline mix of quizzes and activities for rural school children;
+                </li>
+            </ul>
             <p>
-                Architected and developed an in-house tool for authoring and publishing visual novel games, using a
-                node-based workflow with a graphical editor.
+                Architected and developed an in-house tool for authoring and publishing visual novel/interactive fiction
+                games, using a node-based workflow with a graphical editor written in Unity. This allowed non-technical
+                writers to build the entire plot of a game in a single tool, while the technical team implemented any
+                specific gameplay modules required by each individual project.
             </p>
         </article>
         <article id="lagoasoft">
@@ -143,8 +167,7 @@
             <p>
                 Front-end web development and maintenance of Knockout, Angular, and React web applications.
                 Implemented designs created by internal and external teams as well as implemented connections to REST
-                web
-                APIs.
+                web APIs.
             </p>
             <p>
                 Later, leading development in React web applications as well as a React Native mobile application.

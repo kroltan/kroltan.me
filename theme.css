@@ -80,7 +80,8 @@ p {
 article {
     display: grid;
     gap: 0 1em;
-    grid: "title extra";
+    grid: "title extra"
+          / 1fr  auto;
     align-items: start;
     align-content: start;
     padding: 0.5cm;
@@ -102,8 +103,9 @@ article > * {
 
 .gallery {
     display: grid;
-    gap: 0.5cm;
-    grid-template-columns: repeat(auto-fit, minmax(4cm, 1fr));
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, 315px);
+    justify-content: center;
 }
 
 .gallery a {
@@ -111,16 +113,25 @@ article > * {
     gap: 0.25cm;
     flex-direction: column;
     align-items: stretch;
-    padding: 0.25cm;
 }
 
-.gallery h3 {
-    margin: 0;
+.gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery .emphasis {
+    grid-column: span 2;
 }
 
 .work, .projects {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(10cm, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(15cm, 1fr));
+    
+    /* Hello, Firefox user! */
+    /* noinspection CssInvalidPropertyValue */
+    grid-template-rows: masonry;
 }
 
 .summary {
@@ -150,6 +161,9 @@ article > * {
     #about table {
         margin: 0 auto;
     }
+    
+    .gallery .emphasis {
+    }
 
     .work, .projects {
         grid-template-columns: 1fr;
@@ -171,7 +185,7 @@ article > * {
     }
 }
 
-@media screen and (prefers-contrast: high) {
+@media screen and (prefers-contrast: more) {
     #background {
         display: none;
     }
