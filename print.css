@@ -64,6 +64,10 @@ h1, h3, p, .extra {
     margin: 0 !important;
 }
 
+h2 {
+    margin-top: 1cm !important;
+}
+
 article {
     padding: 0.2cm;
 }
