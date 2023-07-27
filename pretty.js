@@ -1,8 +1,9 @@
 /**
  * @param {string} fragmentShaderSource
  * @param {HTMLCanvasElement} target
+ * @param {[[string, (WebGLRenderingContext, WebGLUniformLocation) => void]]} uniforms
  */
-function makePretty(fragmentShaderSource, target) {
+function makePretty(fragmentShaderSource, target, uniforms = []) {
     window.addEventListener("resize", updateSize);
 
     const gl = target.getContext("webgl");
@@ -12,7 +13,7 @@ function makePretty(fragmentShaderSource, target) {
         console.warn("WebGL unsupported, skipping prettification");
         return;
     }
-
+    
     const context = createProgramContext({
         vertex: `
             #version 100
@@ -32,7 +33,8 @@ function makePretty(fragmentShaderSource, target) {
         uniforms: [
             "Resolution",
             "Page",
-            "Time"
+            "Time",
+            ...uniforms.map(x => x[0]),
         ],
     });
     
@@ -69,6 +71,11 @@ function makePretty(fragmentShaderSource, target) {
             Math.sin(seconds),
             Math.cos(seconds)
         );
+
+        for (const [name, setter] of uniforms) {
+            setter(gl, context.uniforms[name]);
+        }
+        
         gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
         
         requestAnimationFrame(drawFrame);
@@ -95,7 +102,7 @@ function makePretty(fragmentShaderSource, target) {
      * @return {{
      *     program: WebGLProgram,
      *     attributes: {[name: string]: WebGLBuffer},
-     *     uniforms: {[name: string]: void},
+     *     uniforms: {[name: string]: WebGLUniformLocation},
      * }}
      * */
     function createProgramContext({vertex, fragment, attributes, uniforms}) {

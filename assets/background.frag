@@ -7,10 +7,14 @@ uniform vec2 Resolution;
 uniform vec4 Page;
 uniform vec3 Time;
 
+uniform float TimeScale;
+uniform vec3 FromColor;
+uniform vec3 ToColor;
+
 vec2 getPoint(in vec2 cell) {
     vec2 even = vec2(equal(mod(cell, 2.0), vec2(0.0)));
     
-    float shuffle = 1.0 - pow(sin(Time.x * 0.333), 3.0);
+    float shuffle = 1.0 - pow(sin(TimeScale * Time.x * 0.333), 3.0);
     float x = shuffle * 0.5 * even.y;
     float y = fract(Page.w / Page.y * even.x);
     
@@ -41,7 +45,10 @@ void main() {
     float totalCells = ceil(Resolution.y / CELL_SIZE);
     
     float checker = mod(result.x + result.y, 2.0);
-    vec3 gradient = vec3(smoothstep(0.0, 1.0, (pixel.y - result.y + 1.0) / 2.0));
+    float gradient = smoothstep(0.0, 1.0, (pixel.y - result.y + 1.0) / 2.0);
     
-    gl_FragColor = vec4((result.yyy - gradient * checker) / totalCells, 1.0);
+    float t = (result.y - gradient * checker) / totalCells;
+    vec3 color = mix(ToColor, FromColor, t);
+    
+    gl_FragColor = vec4(color, 1.0);
 }

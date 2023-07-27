@@ -5,16 +5,24 @@
     <title>Leonardo Giovanni Scur</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="theme.css">
+    <link rel="stylesheet" href="wei.css">
     <link rel="stylesheet" media="screen and (prefers-color-scheme: dark)" href="dark.css">
     <link rel="stylesheet" media="print" href="print.css">
     <script src="pretty.js" async></script>
+    <script src="wei.js" async></script>
     <script>
         const backgroundFragmentSource = fetch("assets/background.frag")
             .then(response => response.text());
 
         async function onPrettyReady() {
-            const background = document.getElementById("background");
-            makePretty(await backgroundFragmentSource, background);
+            const isWei = () => document.querySelector(".wei") != null;
+            
+            makePretty(await backgroundFragmentSource, document.getElementById("background"), [
+                ["TimeScale", (gl, uniform) => gl.uniform1f(uniform, isWei() ? 50 : 1)],
+                ["FromColor", (gl, uniform) => gl.uniform3fv(uniform, isWei() ? [0, 1, 1] : [1, 1, 1])],
+                ["ToColor", (gl, uniform) => gl.uniform3fv(uniform, isWei() ? [0, 0, 1] : [0, 0, 0])]
+            ]);
+            
             background.classList.add("loaded");
         }
     </script>
