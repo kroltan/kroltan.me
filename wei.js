@@ -52,7 +52,7 @@ function comply() {
         .forEach(element => element.innerHTML = randomFromList(HEADINGS));
     document.querySelectorAll("#about tbody td:first-child")
         .forEach(element => element.innerHTML = "We're Dying");
-    document.querySelectorAll("section p, section li")
+    document.querySelectorAll("section p:not(:has(a)), section li")
         .forEach(element => element.innerHTML = randomFromList(PARAGRAPHS));
     document.querySelectorAll("*:not(:empty)")
         .forEach(element => element.style.transform = `rotate(${(Math.random() - 0.5) * 2}deg)`);
