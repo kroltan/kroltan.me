@@ -11,41 +11,41 @@
             font-family: sans-serif;
             font-size: 10pt;
         }
-        
+
         @media screen {
             body {
                 max-width: 40em;
                 font-size: 12pt;
             }
         }
-        
+
         h1, h2, h3 {
             font-size: 1rem;
         }
-        
+
         h3 {
             margin: 0;
         }
-        
+
         dl {
             display: flex;
             gap: 0.5em;
             margin-bottom: 2em;
         }
-        
+
         dt, dd {
             display: inline;
             margin: 0;
         }
-        
+
         dd {
             margin-right: 1em;
         }
-        
+
         section {
             break-inside: avoid;
         }
-        
+
         article {
             display: grid;
             grid:
@@ -54,26 +54,26 @@
                 " photo about" 1fr
                 / 8em   1fr;
             gap: 0 0.5em;
-            
+
             margin-bottom: 1em;
         }
-        
+
         article > img {
             grid-area: photo;
         }
-        
+
         article > h3 {
             grid-area: title;
         }
-        
+
         article > small {
             grid-area: blurb;
         }
-        
+
         article > p {
             grid-area: about;
         }
-        
+
         img {
             display: block;
             width: 100%;
@@ -98,37 +98,57 @@
     <section>
         <h2>Professional Projects</h2>
         <article>
-            <h3>Afterverse: PK XD</h3>
+            <h3>
+                <a href="https://play.google.com/store/apps/details?id=com.movile.playkids.pkxd">
+                    Afterverse: PK XD
+                </a>
+            </h3>
             <img src="/assets/pkxd.png" alt="">
             <small>Mobile 3D social game for children in a retrofuturistic style.</small>
-            <p>Programmer, optimized player-owned-housing loading, refactored asset loading, implemented networked shooting mechanics client- and server-side.</p>
+            <p>Programmer, optimized player-owned-housing loading, refactored asset loading, implemented networked
+                shooting mechanics client- and server-side.</p>
         </article>
         <article>
-            <h3>Afterverse: XDRP</h3>
+            <h3>
+                <a href="https://play.google.com/store/apps/details?id=com.afterverse.afterme">
+                    Afterverse: XDRP
+                </a>
+            </h3>
             <img src="/assets/xdrp.png" alt="">
             <small>Mobile 3D multi-player social / role-playing game set in a modern city.</small>
-            <p>Programmer, framework for networked gameplay, interaction context menu, object holding system, editor tooling.</p>
+            <p>Programmer, framework for networked gameplay, interaction context menu, object holding system, editor
+                tooling.</p>
         </article>
         <article>
-            <h3>Afterverse: PKXD Runner</h3>
+            <h3>
+                <a href="https://play.google.com/store/apps/details?id=com.afterverse.pkxdinfinity">
+                    Afterverse: PKXD Runner
+                </a>
+            </h3>
             <img src="/assets/pkxdrunner.png" alt="">
             <small>Infinite-runner mobile game set in the PK XD universe.</small>
             <p>Programmer, created biome/theme system, integrated advertisement networks.</p>
         </article>
         <article>
-            <h3>DOT: Programa Agrinho</h3>
+            <h3>
+                <a href="https://play.google.com/store/apps/details?id=br.com.sistemafaeg.agrinho">
+                    DOT: Programa Agrinho
+                </a>
+            </h3>
             <img src="/assets/agrinho.png" alt="">
             <small>Offline quiz game with real-life activities for rural schoolchildren.</small>
-            <p>Programmer, implemented UI navigation system, content pack loading via QR code, built several screens.</p>
+            <p>Programmer, implemented UI navigation system, content pack loading via QR code, built several
+                screens.</p>
         </article>
         <article>
             <h3>DOT: Storyline</h3>
             <img src="/assets/storyline.png" alt="">
             <small>Visual novel / interactive fiction framework built over Unity.</small>
-            <p>Discovery, planning and development of visual novel runtime, and node-base authoring tool targeting non-technical users.</p>
+            <p>Discovery, planning and development of visual novel runtime, and node-base authoring tool targeting
+                non-technical users.</p>
         </article>
         <article>
-            <h3>Keen Vectors</h3>
+            <h3><a href="https://keen-vectors.kroltan.me">Keen Vectors</a></h3>
             <img src="/assets/keenvectors.png" alt="">
             <small>To-be-released distance field vector graphics toolset for the Unity engine.</small>
             <p>
@@ -138,29 +158,31 @@
             </p>
         </article>
     </section>
-    
+
     <section>
         <h2>Personal Projects</h2>
         <article>
-            <h3>Ludum Dare 41: Wizsnooks</h3>
+            <h3><a href="https://ldjam.com/events/ludum-dare/41/wizsnooks">Ludum Dare 41: Wizsnooks</a></h3>
             <img src="/assets/wizsnooks.png" alt="">
             <small>2D dungeon crawler with pool controls, a "loot-and-snook" if you will.</small>
-            <p>Programming the game and implementing all the art and some of the sound triggers, Itch.io webpage design and implementation.</p>
+            <p>Programming the game and implementing all the art and some of the sound triggers, Itch.io webpage design
+                and implementation.</p>
         </article>
         <article>
-            <h3>Ludum Dare 45: Farm Fortress 2</h3>
+            <h3><a href="https://ldjam.com/events/ludum-dare/45/farm-fortress-2">Ludum Dare 45: Farm Fortress 2</a></h3>
             <img src="/assets/farmfortress.png" alt="">
             <small>3D tower defence base building / production chain game with a loosely fantasy-medieval theme.</small>
             <p>Concept, programming and 3D modeling for the entire game.</p>
         </article>
         <article>
-            <h3>Ludum Dare 47: Woofice Chair</h3>
+            <h3><a href="https://ldjam.com/events/ludum-dare/47/woofice-chair">Ludum Dare 47: Woofice Chair</a></h3>
             <img src="/assets/wooficechair.png" alt="">
             <small>2D comical and cute dog wave survival game with unusual control scheme.</small>
-            <p>Programmer, implemented character controller, trail effect, cooperated with other programmer to implement UI and assets.</p>
+            <p>Programmer, implemented character controller, trail effect, cooperated with other programmer to implement
+                UI and assets.</p>
         </article>
         <article>
-            <h3>Ludum Dare 43: Super Sellout</h3>
+            <h3><a href="https://ldjam.com/events/ludum-dare/43/super-sellout">Ludum Dare 43: Super Sellout</a></h3>
             <img src="/assets/supersellout.png" alt="">
             <small>2D satire infinite runner about a superhero taking sponsorships.</small>
             <p>Programming the game and implementing all the art and some of the sound triggers.</p>
