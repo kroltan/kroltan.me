@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<?xml-stylesheet type="text/xsl" href="style.xsl" ?>
+<root>
+    <profile>
+        <name>Leonardo Giovanni Scur</name>
+        <picture href="assets/me.png">
+            Monochromatic photo of a caucasian male in his early twenties,
+            slightly overweight, shoulder-length hair tied at the back,
+            wearing slightly crooked square-framed glasses and a black T-shirt upon an empty background.
+        </picture>
+        <introduction>
+            Hi! I'm Leonardo, a game programmer who also makes web things in his spare time.
+        </introduction>
+        <contact name="E-mail"
+                 href="mailto:me@kroltan.com"
+                 value="me@kroltan.com"
+                 kind="identity"/>
+        <contact name="LinkedIn"
+                 href="https://www.linkedin.com/in/kroltan/"
+                 value="kroltan"/>
+        <contact name="GitHub"
+                 href="https://github.com/kroltan"
+                 value="kroltan"/>
+        <contact name="itch.io"
+                 href="https://kroltan.itch.io/"
+                 value="kroltan"/>
+        <contact name="Ludum Dare"
+                 href="https://ldjam.com/users/kroltan/games"
+                 value="kroltan"/>
+        <contact name="StackOverflow"
+                 href="https://stackoverflow.com/users/1045510/kroltan"
+                 value="kroltan"/>
+        <contact name="Mastodon"
+                 href="https://functional.cafe/@kroltan"
+                 value="at functional.cafe"/>
+    </profile>
+    <job company="Prodigy Education"
+         title="Software Developer III"
+         start="2023"
+         id="prodigy2023">
+        <summary>
+            Multiplayer web game development in TypeScript
+        </summary>
+        <p>
+            Development and maintenance of <a href="https://prodigygame.com">Prodigy Math</a>, a classroom and home-use
+            educational math game, using a custom TypeScript-based web game engine.
+        </p>
+    </job>
+    <job cover="assets/pkxd.png"
+         company="Afterverse"
+         title="Game Software Engineer"
+         start="2021"
+         end="2023"
+         id="afterverse2021">
+        <summary>
+            Programming for PK XD, a 3D mobile social game with millions of downloads on a large team,
+            mostly Unity and C# gameplay programming and software architecture, some Kotlin backend/networking.
+        </summary>
+        <p>
+            Development of user-facing and internal features for PK XD (<a
+                href="https://play.google.com/store/apps/details?id=com.movile.playkids.pkxd">Android</a>, <a
+                href="https://apps.apple.com/us/app/pk-xd-explore-the-universe/id1449842729">iOS</a>, <a
+                href="https://playpkxd.com/">Desktop</a>),
+            a 3D multiplayer social game for kids (think Club Penguin styled after The Jetsons) with >100 million
+            downloads. Some of my work on it:
+        </p>
+        <ul>
+            <li>Marking backpack items as favorites for easier access to preferred items;</li>
+            <li>Health, score and respawn logic for shooter-based UGC games, from networking, to gameplay, and UI;
+            </li>
+            <li>
+                Significant performance and architectural improvements to the usage of Addressables for loading
+                of player-created houses and games;
+            </li>
+        </ul>
+        <p>
+            I worked mainly with C# on the Unity game client, but would sometimes dip into the server-side Protobuf
+            and Kotlin code when needed. Also worked on the software architecture, fundamental features and tooling
+            for unannounced projects.
+        </p>
+        <p>
+            Built an ECS-inspired architecture to standardize the local access as well as network synchronization of
+            interactive game objects for an unnanounced project, allowing for faster development of networked
+            gameplay features. Using said architecture, implemented an object picking menu for touchscreen interactions
+            between player and world in third-person.
+        </p>
+    </job>
+    <job title="Game Development Analyst"
+         company="DOT Digital Group"
+         start="2018"
+         end="2021"
+         id="dot2018">
+        <summary>
+            Educational and corporate game development on a small team using Unity. VR, AR, mobile
+            and web games and simulations, participating in the entire project timeline, from concept to deployment.
+        </summary>
+        <p>
+            Design, planning, and development of educational games, corporate training games, and simulators in
+            Unity.
+        </p>
+        <p>
+            Worked on a variety of projects that used various unconventional technologies such as virtual,
+            augmented, and mixed reality, as well as targeting mobile and web platforms.
+        </p>
+        <ul>
+            <li>A VR harvesting combine simulator, with an accurate replica of a real machine's control panel and
+                harvesting process. The goal was to offer a practice environment for new operators;
+            </li>
+            <li>Web-based games for embedding into e-learning platforms. Both low-spec 3D, and 2D games;</li>
+            <li>Various quiz style games for mobile and web, such as <a
+                    href="https://play.google.com/store/apps/details?id=br.com.sistemafaeg.agrinho">Programa
+                Agrinho</a>, a fully-offline mix of quizzes and activities for rural school children;
+            </li>
+        </ul>
+        <p>
+            Architected and developed an in-house tool for authoring and publishing visual novel/interactive fiction
+            games, using a node-based workflow with a graphical editor written in Unity. This allowed non-technical
+            writers to build the entire plot of a game in a single tool, while the technical team implemented any
+            specific gameplay modules required by each individual project.
+        </p>
+    </job>
+    <job company="Lagoasoft"
+         title="Web Developer"
+         start="2016"
+         end="2018"
+         id="lagoasoft2016">
+        <summary>
+            Frontend web development, both maintenance and greenfield, Knockout, Angular, React.
+        </summary>
+        <p>
+            Front-end web development and maintenance of Knockout, Angular, and React web applications.
+            Implemented designs created by internal and external teams as well as implemented connections to REST
+            web APIs.
+        </p>
+        <p>
+            Later, leading development in React web applications as well as a React Native mobile application.
+        </p>
+    </job>
+    <job company="Chaordic"
+         title="Web Developer Intern"
+         start="2013"
+         end="2015"
+         id="chaordic2013">
+        <summary>Front-end Angular development, CSS, some Python backend work.</summary>
+        <p>
+            Some reasonably diverse experiences: mostly front-end AngularJS development, implementing layouts and
+            functionality for dashboards and adminstration panels.
+        </p>
+        <p>
+            Secondarily, I also helped maintain back-end data transformation and transfer scripts in Python,
+            interacting
+            with AWS features. As well as some maintenance and monitoring in Docker-based infrastructure.
+        </p>
+    </job>
+    <project cover="assets/wizsnooks.png"
+             name="Wizsnooks"
+             id="wizsnooks">
+        <p class="summary">Game Design and Development, Ludum Dare roguelike+snookers mashup</p>
+        <p>An entry to the famous <a rel="noopener noreferrer"
+                                     href="https://ldjam.com/events/ludum-dare/41/wizsnooks">Ludum Dare
+        </a> game
+            jam. Can be <a rel="noopener noreferrer" href="https://whalesandgames.itch.io/wizsnooks">played in your
+                browser</a>.
+        </p>
+        <p>
+            This is a very creative dungeon crawling game, with a very important twist: You play as a cueball, and
+            fight through pool/billiards rules or RPG-style attacking! This game features a complete loot and
+            inventory system, and a infinite game session with over 20 items to be found and 15 levels to explore!
+        </p>
+        <p>
+            I acted as a developer together with an artist, and a musician. Also designed the itch.io page for the
+            game.
+        </p>
+    </project>
+    <project cover="assets/farmfortress.png"
+             name="Farm Fortress 2"
+             id="farmfortress">
+        <p class="summary">Game Design and Development, 3D Modeling, Ludum Dare low poly strategy/"factory" game</p>
+        <p>
+            An entry to the famous
+            <a
+                    rel="noopener noreferrer"
+                    href="https://ldjam.com/events/ludum-dare/45/farm-fortress-2">
+                Ludum Dare
+            </a>
+            game jam. Can be
+            <a rel="noopener noreferrer" href="https://kroltan.itch.io/farm-fortress-2">
+                played in your browser</a>.
+        </p>
+        <p>
+            A resource production chain game where you manage a food production chain, from planting wheat to
+            selling bread!
+        </p>
+        <p>
+            I acted as sole author, performing all of the game design, programming, 2D and 3D art.
+        </p>
+    </project>
+    <project cover="assets/wooficechair.png"
+             name="Woofice Chair"
+             id="wooficechair">
+        <p class="summary">Game Development, Ludum Dare wave survival game about cute dogs versus buff animals</p>
+        <p>
+            An entry to the famous
+            <a
+                    rel="noopener noreferrer"
+                    href="https://ldjam.com/events/ludum-dare/47/woofice-chair">
+                Ludum Dare
+            </a>
+            game jam. Can be
+            <a rel="noopener noreferrer" href="https://whalesandgames.itch.io/woofice-chair">
+                played in your browser</a>.
+        </p>
+        <p>
+            This is a goofy wave survival game where you play as one of 3 excellent dogs stuck on a spinning office
+            chair! Your objective is to defend the dog park from invading body-building cats, pidgeons and
+            squirrels, while keeping top angular speed!
+        </p>
+        <p>
+            I acted as a developer together with another developer, an artist, and a musician.
+        </p>
+    </project>
+    <project cover="assets/joulethief.png"
+             name="Joule Thief"
+             id="joulethief">
+        <p class="summary">Game Design and Development, Ludum Dare arcade "mob kiting" game</p>
+        <p>
+            An entry to the famous
+            <a
+                    rel="noopener noreferrer"
+                    href="https://ldjam.com/events/ludum-dare/39/joulethief-charge-your-phone">
+                Ludum Dare
+            </a>
+            game jam. Can be
+            <a rel="noopener noreferrer" href="https://https://kroltan.itch.io/joule-thief">
+                played in your browser</a>.
+        </p>
+        <p>
+            This game is about some guy whose phone's battery is low, and he must break into houses and venues to
+            steal electricity from the outlets. But the police is after him for being a Joule Thief!
+        </p>
+        <p>
+            I acted as a developer together with an artist, and a musician. Also designed the itch.io page for the
+            game.
+        </p>
+    </project>
+    <project cover="assets/supersellout.png"
+             name="Super Sellout"
+             id="supersellout">
+        <p class="summary">Game Development, Ludum Dare game about user-defined difficulty</p>
+        <p>
+            An entry to the famous
+            <a
+                    rel="noopener noreferrer"
+                    href="https://ldjam.com/events/ludum-dare/43/super-sellout">
+                Ludum Dare
+            </a>
+            game jam. Can be
+            <a rel="noopener noreferrer" href="https://whalesandgames.itch.io/super-sellout">
+                played in your browser</a>.
+        </p>
+        <p>
+            Monetization Man is a modern superhero with modern minor internet celebrity issues: he needs money! Take
+            on absurd sponsorships and try to save as many people as you can!
+        </p>
+        <p>
+            I acted as a developer together with another developer, an artist, musician and a level designer.
+        </p>
+    </project>
+    <project cover="assets/troposphir.png"
+             name="Troposphir"
+             id="troposphir">
+        <p class="summary">Reverse Engineering, Native and Web Development, UGC platformer game</p>
+        <p>
+            Community-created alternate server for Atmosphir, a game whose official services was shutdown. Lots of
+            reverse-engineering work went into it, resulting in a (honestly very messy) PHP codebase. In my defense,
+            I was 15!
+        </p>
+        <p>
+            We also implemented a surrounding ecosystem for users:
+        </p>
+        <ul>
+            <li>Multiplatform game launcher that automatically updates the game, in C# and GTK#</li>
+            <li>
+                Landing page to inform new users, which eventually was bestowed the official domain name by the
+                game's erstwhile developers.
+            </li>
+        </ul>
+        <p>
+            I acted as a developer and project manager for the server project, as well as helping conceptualize and
+            develop other tools related to the game. The team size varied over time, but was at its most composed of
+            4 people.
+        </p>
+    </project>
+</root>
