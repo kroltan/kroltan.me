@@ -13,7 +13,7 @@ function makePretty(fragmentShaderSource, target, uniforms = []) {
         console.warn("WebGL unsupported, skipping prettification");
         return;
     }
-    
+
     const context = createProgramContext({
         vertex: `
             #version 100
@@ -37,20 +37,20 @@ function makePretty(fragmentShaderSource, target, uniforms = []) {
             ...uniforms.map(x => x[0]),
         ],
     });
-    
+
     gl.bindBuffer(gl.ARRAY_BUFFER, context.attributes.Position);
     gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([
-         1,  1,
-        -1,  1,
-         1, -1,
+        1, 1,
+        -1, 1,
+        1, -1,
         -1, -1,
     ]), gl.STATIC_DRAW);
 
     gl.useProgram(context.program);
-    
+
     const startTime = Date.now() / 1000;
     drawFrame();
-    
+
     function drawFrame() {
         const seconds = Date.now() / 1000 - startTime;
         gl.uniform2f(
@@ -60,8 +60,8 @@ function makePretty(fragmentShaderSource, target, uniforms = []) {
         );
         gl.uniform4f(
             context.uniforms.Page,
-            document.body.clientWidth,
-            document.body.clientHeight,
+            document.body.scrollWidth,
+            document.body.scrollHeight,
             window.scrollX,
             window.scrollY
         );
@@ -75,9 +75,9 @@ function makePretty(fragmentShaderSource, target, uniforms = []) {
         for (const [name, setter] of uniforms) {
             setter(gl, context.uniforms[name]);
         }
-        
+
         gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
-        
+
         requestAnimationFrame(drawFrame);
     }
 
@@ -87,7 +87,7 @@ function makePretty(fragmentShaderSource, target, uniforms = []) {
         target.height = height;
         gl.viewport(0, 0, width, height);
     }
-    
+
     /**
      * @param {{
      *     vertex: string,
@@ -110,13 +110,13 @@ function makePretty(fragmentShaderSource, target, uniforms = []) {
             loadShader(gl, gl.VERTEX_SHADER, vertex),
             loadShader(gl, gl.FRAGMENT_SHADER, fragment),
         ]);
-        
+
         const context = {
             program,
             attributes: {},
             uniforms: {},
         };
-        
+
         for (const descriptor of attributes) {
             const location = gl.getAttribLocation(program, descriptor.name);
             const buffer = gl.createBuffer();
@@ -126,11 +126,11 @@ function makePretty(fragmentShaderSource, target, uniforms = []) {
             gl.vertexAttribPointer(location, descriptor.components, descriptor.type, false, 0, 0);
             gl.enableVertexAttribArray(location);
         }
-        
+
         for (const descriptor of uniforms) {
             context.uniforms[descriptor] = gl.getUniformLocation(program, descriptor);
         }
-        
+
         return context;
     }
 
