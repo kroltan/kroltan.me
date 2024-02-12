@@ -42,7 +42,7 @@
                 <script src="pretty.js" async="async"/>
                 <script src="wei.js" async="async"/>
                 <script>
-                    const backgroundFragmentSource = fetch("assets/background.frag")
+                    const backgroundFragmentSource = fetch("assets/grid-slide.frag")
                             .then(response => response.text());
 
                     window.onPrettyReady = async function() {
