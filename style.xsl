@@ -10,6 +10,31 @@
                     <xsl:value-of select="profile/name"/>
                 </title>
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
+                <meta name="description">
+                    <xsl:attribute name="content">
+                        <xsl:value-of select="profile/introduction"/>
+                    </xsl:attribute>
+                </meta>
+                <meta name="og:title">
+                    <xsl:attribute name="content">
+                        <xsl:value-of select="profile/name"/>
+                    </xsl:attribute>
+                </meta>
+                <meta name="og:description">
+                    <xsl:attribute name="content">
+                        <xsl:value-of select="profile/introduction"/>
+                    </xsl:attribute>
+                </meta>
+                <meta name="og:image">
+                    <xsl:attribute name="content">
+                        <xsl:value-of select="profile/picture/@href"/>
+                    </xsl:attribute>
+                </meta>
+                <meta name="og:image:alt">
+                    <xsl:attribute name="content">
+                        <xsl:value-of select="profile/picture"/>
+                    </xsl:attribute>
+                </meta>
                 <link rel="stylesheet" href="theme.css"/>
                 <link rel="stylesheet" href="wei.css"/>
                 <link rel="stylesheet" media="screen and (prefers-color-scheme: dark)" href="dark.css"/>
@@ -178,6 +203,4 @@
             </xsl:attribute>
         </img>
     </xsl:template>
-
-    <xsl:template match="text()"/>
 </xsl:stylesheet>
