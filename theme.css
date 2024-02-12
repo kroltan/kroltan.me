@@ -13,6 +13,7 @@
 body {
     display: flex;
     justify-content: center;
+    align-items: start;
     background: var(--nav-background);
     position: relative;
     margin: 0 2em;
@@ -163,6 +164,7 @@ article > * {
     }
     
     .gallery .emphasis {
+        grid-column: unset;
     }
 
     .work, .projects {
@@ -185,7 +187,7 @@ article > * {
     }
 }
 
-@media screen and (prefers-contrast: more) {
+@media (prefers-contrast: more), (prefers-reduced-motion: reduce) {
     #background {
         display: none;
     }
