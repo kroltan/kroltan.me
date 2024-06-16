@@ -2,9 +2,10 @@
 :root {
     box-sizing: border-box;
     --main-width: 30cm;
-    --main-background: white;
+    --main-background: rgb(255, 255, 255);
     --nav-background: rgb(231, 231, 231);
     --monochrome-blend-mode: darken;
+    --background-blend-mode: soft-light;
     font-family: "Fira", sans-serif;
     color: black;
     line-height: 1.75em;
@@ -58,24 +59,48 @@ h2:not(:first-of-type) {
     flex-shrink: 0;
     position: sticky;
     top: 0;
-    mix-blend-mode: var(--monochrome-blend-mode);
     align-self: start;
+    mix-blend-mode: var(--monochrome-blend-mode);
 }
 
 main {
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: content;
-    background: var(--main-background);
+    position: relative;
     box-shadow: 0 0 10em rgba(0.5, 0.5, 0.5, 0.3);
+}
+
+main::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: var(--main-background);
+    mix-blend-mode: var(--background-blend-mode);
 }
 
 #about, main {
     padding: 0.5cm 1cm;
 }
 
+#about table {
+    width: 100%;
+}
+
 p {
     margin: 0 0 0.333cm 0;
+}
+
+a {
+    color: color-mix(in oklab, currentColor, 50% cornflowerblue);
+}
+
+a:visited {
+    color: color-mix(in oklab, currentColor, 50% purple);
 }
 
 article {
@@ -152,14 +177,8 @@ article > * {
         align-self: unset;
     }
 
-    #about::before {
-        left: -100vw;
-        right: -100vw;
-        top: 0;
-        height: 100%;
-    }
-
     #about table {
+        width: unset;
         margin: 0 auto;
     }
     

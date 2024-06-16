@@ -3,6 +3,7 @@
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                 version="1.0">
     <xsl:output method="html"/>
+
     <xsl:template match="/root">
         <html>
             <head>
@@ -50,11 +51,16 @@
 
                         const background = document.getElementById("background");
 
+                        let usage = 0;
+
                         makePretty(await backgroundFragmentSource, background, [
                             ["TimeScale", (gl, uniform) => gl.uniform1f(uniform, isWei() ? 50 : 1)],
                             ["FromColor", (gl, uniform) => gl.uniform3fv(uniform, isWei() ? [0, 1, 1] : [1, 1, 1])],
-                            ["ToColor", (gl, uniform) => gl.uniform3fv(uniform, isWei() ? [0, 0, 1] : [0, 0, 0])]
+                            ["ToColor", (gl, uniform) => gl.uniform3fv(uniform, isWei() ? [0, 0, 1] : [0, 0, 0])],
+                            ["WackScale", (gl, uniform) => gl.uniform1f(uniform, usage)]
                         ]);
+
+                        document.addEventListener("pointermove", event => usage += Math.abs(event.movementX + event.movementY) / (20 * window.innerWidth));
 
                         background.classList.add("loaded");
                     };
@@ -91,7 +97,7 @@
                     </aside>
                     <h2>Work Experience</h2>
                     <section class="work">
-                        <xsl:for-each select="job">
+                        <xsl:for-each select="//job">
                             <article>
                                 <xsl:attribute name="id">
                                     <xsl:value-of select="@id"/>
@@ -111,7 +117,7 @@
                                         <xsl:value-of select="@end"/>
                                     </xsl:if>
                                 </div>
-                                <xsl:copy-of select="*[not(self::summary)]"/>
+                                <xsl:apply-templates select="*[not(self::summary)]"/>
                             </article>
                         </xsl:for-each>
                     </section>
@@ -125,7 +131,7 @@
                                 <h3>
                                     <xsl:value-of select="@name"/>
                                 </h3>
-                                <xsl:copy-of select="*"/>
+                                <xsl:apply-templates select="*"/>
                             </article>
                         </xsl:for-each>
                     </section>
@@ -202,5 +208,26 @@
                 <xsl:value-of select="normalize-space(.)"/>
             </xsl:attribute>
         </img>
+    </xsl:template>
+
+    <xsl:template match="a">
+        <a>
+            <xsl:attribute name="rel">noopener noreferrer</xsl:attribute>
+            <xsl:attribute name="href">
+                <xsl:value-of select="@href"/>
+            </xsl:attribute>
+            <xsl:value-of select="text()"/>
+        </a>
+    </xsl:template>
+
+    <xsl:template match="*">
+        <xsl:element name="{local-name(.)}">
+            <xsl:for-each select="@*">
+                <xsl:attribute name="{name()}">
+                    <xsl:value-of select="."/>
+                </xsl:attribute>
+            </xsl:for-each>
+            <xsl:apply-templates/>
+        </xsl:element>
     </xsl:template>
 </xsl:stylesheet>

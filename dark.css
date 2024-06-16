@@ -2,16 +2,8 @@
     --main-background: rgb(26, 25, 24);
     --nav-background: rgb(40, 38, 38);
     --monochrome-blend-mode: lighten;
+    --background-blend-mode: hard-light;
     color: white;
-}
-
-a {
-    color: cornflowerblue;
-    text-shadow: 0 0 1px gray(0.8);
-}
-
-a:visited {
-    color: darkorchid;
 }
 
 #background {

@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<?xml-stylesheet type="text/xsl" href="style.xsl" ?>
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<?xml-stylesheet type="text/xsl" href="templates/website.xsl" ?>
 <root>
     <profile>
         <name>Leonardo Giovanni Scur</name>
@@ -80,7 +80,7 @@
         </p>
         <p>
             Built an ECS-inspired architecture to standardize the local access as well as network synchronization of
-            interactive game objects for an unnanounced project, allowing for faster development of networked
+            interactive game objects for an unannounced project, allowing for faster development of networked
             gameplay features. Using said architecture, implemented an object picking menu for touchscreen interactions
             between player and world in third-person.
         </p>
@@ -144,7 +144,7 @@
         <summary>Front-end Angular development, CSS, some Python backend work.</summary>
         <p>
             Some reasonably diverse experiences: mostly front-end AngularJS development, implementing layouts and
-            functionality for dashboards and adminstration panels.
+            functionality for dashboards and administration panels.
         </p>
         <p>
             Secondarily, I also helped maintain back-end data transformation and transfer scripts in Python,
@@ -156,11 +156,8 @@
              name="Wizsnooks"
              id="wizsnooks">
         <p class="summary">Game Design and Development, Ludum Dare roguelike+snookers mashup</p>
-        <p>An entry to the famous <a rel="noopener noreferrer"
-                                     href="https://ldjam.com/events/ludum-dare/41/wizsnooks">Ludum Dare
-        </a> game
-            jam. Can be <a rel="noopener noreferrer" href="https://whalesandgames.itch.io/wizsnooks">played in your
-                browser</a>.
+        <p>An entry to the famous <a href="https://ldjam.com/events/ludum-dare/41/wizsnooks">Ludum Dare</a> game
+            jam. Can be <a href="https://whalesandgames.itch.io/wizsnooks">played in your browser</a>.
         </p>
         <p>
             This is a very creative dungeon crawling game, with a very important twist: You play as a cueball, and
@@ -178,21 +175,16 @@
         <p class="summary">Game Design and Development, 3D Modeling, Ludum Dare low poly strategy/"factory" game</p>
         <p>
             An entry to the famous
-            <a
-                    rel="noopener noreferrer"
-                    href="https://ldjam.com/events/ludum-dare/45/farm-fortress-2">
-                Ludum Dare
-            </a>
+            <a href="https://ldjam.com/events/ludum-dare/45/farm-fortress-2"> Ludum Dare</a>
             game jam. Can be
-            <a rel="noopener noreferrer" href="https://kroltan.itch.io/farm-fortress-2">
-                played in your browser</a>.
+            <a href="https://kroltan.itch.io/farm-fortress-2">played in your browser</a>.
         </p>
         <p>
             A resource production chain game where you manage a food production chain, from planting wheat to
             selling bread!
         </p>
         <p>
-            I acted as sole author, performing all of the game design, programming, 2D and 3D art.
+            I acted as sole author, performing all the game design, programming, 2D and 3D art.
         </p>
     </project>
     <project cover="assets/wooficechair.png"
@@ -201,18 +193,13 @@
         <p class="summary">Game Development, Ludum Dare wave survival game about cute dogs versus buff animals</p>
         <p>
             An entry to the famous
-            <a
-                    rel="noopener noreferrer"
-                    href="https://ldjam.com/events/ludum-dare/47/woofice-chair">
-                Ludum Dare
-            </a>
+            <a href="https://ldjam.com/events/ludum-dare/47/woofice-chair">Ludum Dare</a>
             game jam. Can be
-            <a rel="noopener noreferrer" href="https://whalesandgames.itch.io/woofice-chair">
-                played in your browser</a>.
+            <a href="https://whalesandgames.itch.io/woofice-chair">played in your browser</a>.
         </p>
         <p>
             This is a goofy wave survival game where you play as one of 3 excellent dogs stuck on a spinning office
-            chair! Your objective is to defend the dog park from invading body-building cats, pidgeons and
+            chair! Your objective is to defend the dog park from invading body-building cats, pigeons and
             squirrels, while keeping top angular speed!
         </p>
         <p>
@@ -225,14 +212,9 @@
         <p class="summary">Game Design and Development, Ludum Dare arcade "mob kiting" game</p>
         <p>
             An entry to the famous
-            <a
-                    rel="noopener noreferrer"
-                    href="https://ldjam.com/events/ludum-dare/39/joulethief-charge-your-phone">
-                Ludum Dare
-            </a>
+            <a href="https://ldjam.com/events/ludum-dare/39/joulethief-charge-your-phone">Ludum Dare</a>
             game jam. Can be
-            <a rel="noopener noreferrer" href="https://https://kroltan.itch.io/joule-thief">
-                played in your browser</a>.
+            <a href="https://https://kroltan.itch.io/joule-thief">played in your browser</a>.
         </p>
         <p>
             This game is about some guy whose phone's battery is low, and he must break into houses and venues to
@@ -249,14 +231,9 @@
         <p class="summary">Game Development, Ludum Dare game about user-defined difficulty</p>
         <p>
             An entry to the famous
-            <a
-                    rel="noopener noreferrer"
-                    href="https://ldjam.com/events/ludum-dare/43/super-sellout">
-                Ludum Dare
-            </a>
+            <a href="https://ldjam.com/events/ludum-dare/43/super-sellout">Ludum Dare</a>
             game jam. Can be
-            <a rel="noopener noreferrer" href="https://whalesandgames.itch.io/super-sellout">
-                played in your browser</a>.
+            <a href="https://whalesandgames.itch.io/super-sellout">played in your browser</a>.
         </p>
         <p>
             Monetization Man is a modern superhero with modern minor internet celebrity issues: he needs money! Take
@@ -271,7 +248,8 @@
              id="troposphir">
         <p class="summary">Reverse Engineering, Native and Web Development, UGC platformer game</p>
         <p>
-            Community-created alternate server for Atmosphir, a game whose official services was shutdown. Lots of
+            Community-created <a href="https://onemoreblock.com/landing/">alternate server</a>
+            for Atmosphir, a game whose official services was shutdown. Lots of
             reverse-engineering work went into it, resulting in a (honestly very messy) PHP codebase. In my defense,
             I was 15!
         </p>

@@ -10,6 +10,13 @@ uniform vec3 Time;
 uniform float TimeScale;
 uniform vec3 FromColor;
 uniform vec3 ToColor;
+uniform float WackScale;
+
+// From https://stackoverflow.com/a/4275343/
+// Don't care about randomness precision as we're using mostly fixed inputs
+float rand(vec2 co){
+    return fract(sin(dot(co, vec2(12.9898, 78.233))) * 43758.5453) - 0.5;
+}
 
 vec2 getPoint(in vec2 cell) {
     vec2 even = vec2(equal(mod(cell, 2.0), vec2(0.0)));
@@ -17,8 +24,11 @@ vec2 getPoint(in vec2 cell) {
     float shuffle = 1.0 - pow(sin(TimeScale * Time.x * 0.333), 3.0);
     float x = shuffle * 0.5 * even.y;
     float y = fract(Page.w / Page.y * even.x);
+
+    float angle = rand(cell) * 3.14159;
+    vec2 wack = WackScale * vec2(cos(angle), sin(angle));
     
-    vec2 offset = vec2(x, y);
+    vec2 offset = vec2(x, y) + wack;
     
     return offset;
 }
