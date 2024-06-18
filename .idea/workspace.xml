@@ -4,14 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="035e9d4c-11ff-4a4b-a0eb-0c2ea5fdd3b4" name="Changes" comment="Fixed scrolling dynamics in Chromium">
-      <change beforePath="$PROJECT_DIR$/.idea/kroltan.me.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/kroltan.me.iml" afterDir="false" />
+    <list default="true" id="035e9d4c-11ff-4a4b-a0eb-0c2ea5fdd3b4" name="Changes" comment="New wack effect, fixed link spacing, versatile link handling">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/grid-slide.frag" beforeDir="false" afterPath="$PROJECT_DIR$/assets/grid-slide.frag" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dark.css" beforeDir="false" afterPath="$PROJECT_DIR$/dark.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/index.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.xsl" beforeDir="false" afterPath="$PROJECT_DIR$/templates/website.xsl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/theme.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,8 +65,19 @@
       <workItem from="1716934037408" duration="8641000" />
       <workItem from="1717017267864" duration="4000" />
       <workItem from="1718548797227" duration="5167000" />
-      <workItem from="1718553971073" duration="1683000" />
+      <workItem from="1718553971073" duration="2055000" />
+      <workItem from="1718556092532" duration="15000" />
+      <workItem from="1718714254918" duration="793000" />
     </task>
+    <task id="LOCAL-00001" summary="New wack effect, fixed link spacing, versatile link handling">
+      <option name="closed" value="true" />
+      <created>1718556047017</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1718556047017</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -88,5 +93,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="New wack effect, fixed link spacing, versatile link handling" />
+    <option name="LAST_COMMIT_MESSAGE" value="New wack effect, fixed link spacing, versatile link handling" />
   </component>
 </project>
