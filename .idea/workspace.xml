@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="035e9d4c-11ff-4a4b-a0eb-0c2ea5fdd3b4" name="Changes" comment="New wack effect, fixed link spacing, versatile link handling">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="035e9d4c-11ff-4a4b-a0eb-0c2ea5fdd3b4" name="Changes" comment="Update to new local network setup" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -68,6 +66,7 @@
       <workItem from="1718553971073" duration="2055000" />
       <workItem from="1718556092532" duration="15000" />
       <workItem from="1718714254918" duration="793000" />
+      <workItem from="1718743893123" duration="2761000" />
     </task>
     <task id="LOCAL-00001" summary="New wack effect, fixed link spacing, versatile link handling">
       <option name="closed" value="true" />
@@ -77,7 +76,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718556047017</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Update to new local network setup">
+      <option name="closed" value="true" />
+      <created>1718747953534</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1718747953535</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -96,6 +103,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="New wack effect, fixed link spacing, versatile link handling" />
-    <option name="LAST_COMMIT_MESSAGE" value="New wack effect, fixed link spacing, versatile link handling" />
+    <MESSAGE value="Update to new local network setup" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update to new local network setup" />
   </component>
 </project>

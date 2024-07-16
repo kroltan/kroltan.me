@@ -1,2 +1,4 @@
 /minecraft/map/* http://home.kroltan.me:59861/:splat 200
+https://photos.kroltan.me/* https://kroltan.synology.me:3001/:splat 200
+https://home.kroltan.me/* https://kroltan.synology.me:4000/:splat 200
 / /index.xml 200
