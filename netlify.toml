@@ -16,7 +16,6 @@ status = 200
 [[redirects]]
 from = "https://gitea.kroltan.me/*"
 to = "https://kroltan.synology.me:3003/:splat"
-headers = { Host = "gitea.kroltan.me" }
 status = 200
 
 [[redirects]]
