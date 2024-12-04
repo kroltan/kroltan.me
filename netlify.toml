@@ -1,0 +1,30 @@
+[[redirects]]
+from = "/minecraft/map/*"
+to = "http://home.kroltan.me:59861/:splat"
+status = 200
+
+[[redirects]]
+from = "https://photos.kroltan.me/*"
+to = "https://kroltan.synology.me:3001/:splat"
+status = 200
+
+[[redirects]]
+from = "https://drive.kroltan.me/*"
+to = "https://kroltan.synology.me:3002/:splat"
+status = 200
+
+[[redirects]]
+from = "https://gitea.kroltan.me/*"
+to = "https://kroltan.synology.me:3003/:splat"
+headers = { Host = "gitea.kroltan.me" }
+status = 200
+
+[[redirects]]
+from = "https://home.kroltan.me/*"
+to = "https://kroltan.synology.me:4000/:splat"
+status = 200
+
+[[redirects]]
+from = "/"
+to = "/index.xml"
+status = 200

@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="035e9d4c-11ff-4a4b-a0eb-0c2ea5fdd3b4" name="Changes" comment="Update to new local network setup" />
+    <list default="true" id="035e9d4c-11ff-4a4b-a0eb-0c2ea5fdd3b4" name="Changes" comment="Updated Gitea redirects">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,7 +46,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-WS-241.17011.90" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-WS-242.22855.79" />
       </set>
     </attachedChunks>
   </component>
@@ -67,6 +69,12 @@
       <workItem from="1718556092532" duration="15000" />
       <workItem from="1718714254918" duration="793000" />
       <workItem from="1718743893123" duration="2761000" />
+      <workItem from="1721168638131" duration="2714000" />
+      <workItem from="1721340262668" duration="6000" />
+      <workItem from="1721352050826" duration="21000" />
+      <workItem from="1726323584610" duration="1871000" />
+      <workItem from="1726335433333" duration="2390000" />
+      <workItem from="1728413071886" duration="9000" />
     </task>
     <task id="LOCAL-00001" summary="New wack effect, fixed link spacing, versatile link handling">
       <option name="closed" value="true" />
@@ -84,7 +92,39 @@
       <option name="project" value="LOCAL" />
       <updated>1718747953535</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added Synology redirects">
+      <option name="closed" value="true" />
+      <created>1721168849628</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1721168849628</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Added Synology redirects">
+      <option name="closed" value="true" />
+      <created>1721171430558</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1721171430558</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Added Gitea redirects">
+      <option name="closed" value="true" />
+      <created>1721171583313</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1721171583313</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Updated Gitea redirects">
+      <option name="closed" value="true" />
+      <created>1721352064520</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1721352064520</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -104,6 +144,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="New wack effect, fixed link spacing, versatile link handling" />
     <MESSAGE value="Update to new local network setup" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update to new local network setup" />
+    <MESSAGE value="Added Synology redirects" />
+    <MESSAGE value="Added Gitea redirects" />
+    <MESSAGE value="Updated Gitea redirects" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated Gitea redirects" />
   </component>
 </project>
