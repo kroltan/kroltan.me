@@ -1,18 +1,17 @@
 /**
  * @param {string} fragmentShaderSource
  * @param {HTMLCanvasElement} target
- * @param {[[string, (WebGLRenderingContext, WebGLUniformLocation) => void]]} uniforms
+ * @param {[string, (WebGLRenderingContext, WebGLUniformLocation) => void][]} uniforms
  */
 function makePretty(fragmentShaderSource, target, uniforms = []) {
-    window.addEventListener("resize", updateSize);
-
     const gl = target.getContext("webgl");
-    updateSize();
-
     if (gl == null) {
         console.warn("WebGL unsupported, skipping prettification");
         return;
     }
+
+    window.addEventListener("resize", updateSize);
+    updateSize();
 
     const context = createProgramContext({
         vertex: `
