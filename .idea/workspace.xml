@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="035e9d4c-11ff-4a4b-a0eb-0c2ea5fdd3b4" name="Changes" comment="Remove useless header, synology doesnt pass it through">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/grid-slide.frag" beforeDir="false" afterPath="$PROJECT_DIR$/assets/grid-slide.frag" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pretty.js" beforeDir="false" afterPath="$PROJECT_DIR$/pretty.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +48,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-WS-243.22562.222" />
+        <option value="bundled-js-predefined-d6986cc7102b-b26f3e71634d-JavaScript-WS-251.26094.131" />
       </set>
     </attachedChunks>
   </component>
@@ -84,6 +82,14 @@
       <workItem from="1735310896043" duration="295000" />
       <workItem from="1735311197065" duration="5784000" />
       <workItem from="1737493069858" duration="1467000" />
+      <workItem from="1745110067223" duration="22000" />
+      <workItem from="1746914190361" duration="2646000" />
+      <workItem from="1750816809927" duration="640000" />
+      <workItem from="1753416380790" duration="2448000" />
+      <workItem from="1753795902040" duration="933000" />
+      <workItem from="1754103459941" duration="95000" />
+      <workItem from="1754279942713" duration="17000" />
+      <workItem from="1754516176599" duration="12979000" />
     </task>
     <task id="LOCAL-00001" summary="New wack effect, fixed link spacing, versatile link handling">
       <option name="closed" value="true" />
