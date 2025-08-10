@@ -44,15 +44,13 @@
             cursor: pointer;
         }
 
-        details > p {
-            max-width: calc(100% - 5rem);
-        }
-
         aside {
             float: right;
+            position: relative;
             width: 15rem;
             padding: 0.5rem;
             margin-left: 1rem;
+            z-index: 1;
 
             font-size: calc(1em - 2pt);
             background: wheat;
@@ -73,58 +71,64 @@
             margin: 1em 0 0;
         }
 
-        details p {
+        details > p {
+            --man: 0%;
+            --woman1: 0%;
+            --woman2: 0%;
+            --a: "";
+            --b: "";
+            --c: "";
+
             margin: 0;
             padding: 0.75rem 0.5rem;
+
+            background: linear-gradient(in srgb to right,
+                color-mix(in srgb, transparent, rgba(255, 0, 0, 0.1) var(--woman1)),
+                color-mix(in srgb, transparent, rgba(0, 255, 0, 0.1) var(--woman2)),
+                color-mix(in srgb, transparent, rgba(0, 0, 255, 0.1) var(--man))
+            );
         }
 
-        details p:first-of-type {
+        details > p:first-of-type {
             margin-top: 0.5rem;
         }
 
-        details p::before {
-            content: "";
+        details > p::before {
+            content: var(--a) var(--b) var(--c);
             position: absolute;
             right: calc(100% + 0.5rem);
             width: 100%;
             height: 100%;
             margin-top: -0.5rem;
 
-            font-size: 1.5em;
+            font-size: 1.5rem;
             text-align: right;
-            vertical-align: center;
             opacity: 0.5;
         }
 
-        [title~=Man] {
-            background: linear-gradient(to right, rgba(0, 0, 255, 0.075), transparent);
+        details p.backing::before {
+            font-size: 1rem;
+            margin-top: 0;
         }
 
-        [title~=Woman] {
-            background: linear-gradient(to right, rgba(255, 0, 0, 0.075), transparent);
+        [data-m] {
+            --man: 100%;
+            --c: "👨";
+        }
+        [data-w1] {
+            --woman1: 100%;
+            --a: "👩";
+        }
+        [data-w2] {
+            --woman2: 100%;
+            --b: "🧑";
         }
 
-        [title~=Man][title~=Woman] {
-            background: linear-gradient(to right, rgba(255, 0, 255, 0.075), transparent);
-        }
-
-        :not([title~=Man]) + [title~=Man]::before {
-            content: "👨" !important;
-        }
-        :not([title~=Woman]) + [title~=Woman]::before {
-            content: "👩" !important;
-        }
-        :not([title~=Man][title~=Woman]) + [title~=Man][title~=Woman]::before {
-            content: "👨👩" !important;
-        }
         .backing {
             font-size: calc(1em - 1pt);
-            margin-top: 0;
-            margin-left: 1em;
+            padding-top: 0;
+            padding-left: 1.5em;
         }
-
-        .backing::before { content: "("; }
-        .backing::after { content: ")"; }
 
         header {
             margin-bottom: 2rem;
@@ -132,8 +136,25 @@
         footer {
             margin-top: 2rem;
         }
+
         del {
+            position: relative;
+
             cursor: help;
+            text-decoration: none;
+            border: 1px dotted currentColor;
+            border-radius: 0.25em;
+        }
+
+        del::after {
+            content: "?";
+            position: absolute;
+            right: 0;
+            top: 0;
+
+            font-size: 0.5em;
+            transform: translate(150%, -50%);
+            text-shadow: 0 0 0.5em white;
         }
     </style>
 </head>
@@ -157,47 +178,47 @@
             <p>After the covertly sexual Coal-hearted Woman, I transcribed "Paul" here, framing this as a breakup song.</p>
             <p>But I really can't hear the exact word, your guess is as good as mine.</p>
         </aside>
-        <p>Paul is like an archaeologist.</p>
-        <p>Dusting with a brush of fingertips.</p>
-        <p>It seems as though he's stumbled onto something really odd.</p>
-        <p>His heart goes pitter-patter when he silhouettes the <del title="I hear 'au' and 's', guess">vaults</del>.</p>
-        <p>Paul is like an archaeologist.</p>
-        <p>Paul is like a diamond hardening.</p>
-        <p>A short-range crystal order, along centuries.</p>
-        <p>Chemicals within the ground combine to something new,</p>
-        <p>A collision of the nucleus in a graphite molecule.</p>
-        <p>Paul is like a diamond hardening.</p>
-        <p>Goodbye, sweet sorrow, you've been a friend.</p>
-        <p>But I'm afraid tomorrow we must end.</p>
-        <p>You've leaned upon my shoulder oh so many times,</p>
-        <p>Likewise have I shared with you teardrops from my eyes.</p>
-        <p>Goodbye, sweet sorrow, you've been a friend.</p>
+        <p data-w1><del title="I hear 'au', guess">Paul</del> is like an archaeologist.</p>
+        <p data-w1>Dusting with a brush of fingertips.</p>
+        <p data-w1>It seems as though he's stumbled onto something really odd.</p>
+        <p data-w1>His heart goes pitter-patter when he silhouettes the <del title="I hear 'au' and 's', guess">vaults</del>.</p>
+        <p data-w1><del title="I hear 'au', guess">Paul</del> is like an archaeologist.</p>
+        <p data-w1><del title="I hear 'au', guess">Paul</del> is like a diamond hardening.</p>
+        <p data-w1>A short-range crystal order, along centuries.</p>
+        <p data-w1>Chemicals within the ground combine to something new,</p>
+        <p data-w1>A collision of the nucleus in a graphite molecule.</p>
+        <p data-w1><del title="I hear 'au', guess">Paul</del> is like a diamond hardening.</p>
+        <p data-w1>Goodbye, sweet sorrow, you've been a friend.</p>
+        <p data-w1>But I'm afraid tomorrow we must end.</p>
+        <p data-w1>You've leaned upon my shoulder oh so many times,</p>
+        <p data-w1>Likewise have I shared with you teardrops from my eyes.</p>
+        <p data-w1>Goodbye, sweet sorrow, you've been a friend.</p>
     </details>
     <details>
         <summary>A Hull Full of Oil and Bone</summary>
-        <p>Down the coast, around the cave.</p>
-        <p>We'll sail to where the right wells wind.</p>
-        <p>Two years a berth before the mast, we'll make a man of you at last.</p>
-        <p>From a wheezing little boy, who cries 'cause his mother is gone.</p>
-        <p>You will hear the siren's song.</p>
-        <p>We sail with a following tide.</p>
-        <p>Hard tack and salt beef, watery rum and loose teeth.</p>
-        <p>Your skin will blister, crack and peel.</p>
-        <p>You will know what the devil feels in hell down below.</p>
-        <p>But near enough to Jack.</p>
-        <p>So say your prayers and heave away.</p>
-        <p>There's nonny when we get back.</p>
-        <p>Flail off loud and furl the sails, and brace the yarn against the coming gale.</p>
-        <p>'Cause the wind is blowing and the ship will list.</p>
-        <p>Waves will crash and wash across this deck, carry away everything that ain't lashed down.</p>
-        <p>And better men than you have drowned in a bluer sea than this.</p>
-        <p>There she blows off the the larboard bow, into the boats and two are down.</p>
-        <p>Get close enough to see its eye, and throw a hook deep in its hide.</p>
-        <p>It's good as gold and we bring it all back home.</p>
-        <p>And your reward is a sailor's share</p>
-        <p>Of a hull full of oil and bone,</p>
-        <p>Of a hull full of oil and bone,</p>
-        <p>Of a hull full of oil and bone.</p>
+        <p data-m>Down the coast, around the cave.</p>
+        <p data-m>We'll sail to where the right wells wind.</p>
+        <p data-m>Two years a berth before the mast, we'll make a man of you at last.</p>
+        <p data-m>From a wheezing little boy, who cries 'cause his mother is gone.</p>
+        <p data-m>You will hear the siren's song.</p>
+        <p data-m>We sail with a following tide.</p>
+        <p data-m>Hard tack and salt beef, watery rum and loose teeth.</p>
+        <p data-m>Your skin will blister, crack and peel.</p>
+        <p data-m>You will know what the devil feels in hell down below.</p>
+        <p data-m>But near enough to Jack.</p>
+        <p data-m>So say your prayers and heave away.</p>
+        <p data-m>There's nonny when we get back.</p>
+        <p data-m>Flail off loud and furl the sails, and brace the yarn against the coming gale.</p>
+        <p data-m>'Cause the wind is blowing and the ship will list.</p>
+        <p data-m>Waves will crash and wash across this deck, carry away everything that ain't lashed down.</p>
+        <p data-m>And better men than you have drowned in a bluer sea than this.</p>
+        <p data-m>There she blows off the the larboard bow, into the boats and two are down.</p>
+        <p data-m>Get close enough to see its eye, and throw a hook deep in its hide.</p>
+        <p data-m>It's good as gold and we bring it all back home.</p>
+        <p data-m>And your reward is a sailor's share</p>
+        <p data-m>Of a hull full of oil and bone,</p>
+        <p data-m>Of a hull full of oil and bone,</p>
+        <p data-m>Of a hull full of oil and bone.</p>
     </details>
     <details>
         <summary>Coal-hearted Woman</summary>
@@ -216,108 +237,109 @@
                 Mega oof if it's meant like that, but maybe I may have misheard it.
             </p>
         </aside>
-        <p title="Man">Your fields have lain fallow for far too many years.</p>
-        <p title="Woman">They need a hand that's strong enough to till them.</p>
-        <p title="Man">I would dig a well deep within your ground.</p>
-        <p title="Woman">To irrigate my dusty arid lands.</p>
-        <p title="Man">I would churn the butter,</p>
-        <p title="Woman">I would turn the earth.</p>
-        <p title="Man and Woman together">We could plant a tree inside the garden.</p>
-        <p title="Man">Every morning up at dawn, I'd fetch the milk and mow the lawn.</p>
-        <p title="Woman">My rosebush will begin to blossom.</p>
-        <p title="Man and Woman together">The peaches hanging on your trees stay sweet in my memory forever.</p>
-        <p title="Man">I have lain in the green green grass of Ireland.</p>
-        <p title="Woman" class="backing">I have lain... green grass, green grass of Ireland.</p>
-        <p title="Man">I've plowed the fertile earth of East Africa.</p>
-        <p title="Woman" class="backing">I've plowed the fields of Africa. I've sown my seed in foreign land.</p>
-        <p title="Man">I've sown my seed in foreign land.</p>
-        <p title="Woman" class="backing">I'll return to your vineyard, I'll return to your freeport</p>
-        <p title="Man">But I will return, to the vineyards and your sweet red wine.</p>
-        <p title="Woman" class="backing">I have lain the green green grass, plowed the fields of Africa, sown my seed in foreign land</p>
-        <p title="Man">I'll pitch my tent along your tangled vines.</p>
-        <p title="Woman" class="backing">I'll pitch a tent along the vine. Won't you let me come inside?</p>
-        <p title="Man and Woman together">(Won't you) let me come inside?</p>
-        <p title="Man">I'd like to sink my shaft in your South Virginia hills.</p>
-        <p title="Man">I dream of all the treasures I would find.</p>
-        <p title="Woman">My heart and my soul are copper ore and coal. Precious rubies, chased with things of gold.</p>
-        <p title="Man">Overhead the milky way shines across your grassy fields.</p>
-        <p title="Woman">The Moon is rising full in front of me.</p>
-        <p title="Man">I will pass the hours wrapped beneath your stars.</p>
-        <p title="Woman">'Till morning light sends you on your way.</p>
-        <p title="Man and Woman together">Memories of buried gold bring me back again to dig that further.</p>
-        <p title="Man">I have seen sapphires blue and emeralds green,</p>
-        <p title="Woman" class="backing">I have seen sapphires blue and emeralds green, milk-white pearls from the China sea.</p>
-        <p title="Man">Milk-white pearls from the China sea.</p>
-        <p title="Woman" class="backing">Drilled for oil around the globe.</p>
-        <p title="Man">I've drilled for oil across the globe.</p>
-        <p title="Woman" class="backing">Sapphires blue and emeralds green, I'll return to the cave</p>
-        <p title="Man">But I will return to the cave wherein your treasures lie.</p>
-        <p title="Woman" class="backing">Pan for gold across the side, I have seen the sapphires blue, I have seen emeralds green, I find pearls of the China sea</p>
-        <p title="Man">I'll pan for gold across your mountainside.</p>
-        <p title="Woman" class="backing">Drill for oil around the globe, pan for gold on mountainside</p>
-        <p title="Man and Woman together">(Won't you) let me come inside?</p>
+        <p data-m>Your fields have lain fallow for far too many years.</p>
+        <p data-w1>They need a hand that's strong enough to till them.</p>
+        <p data-m>I would dig a well deep within your ground.</p>
+        <p data-w1>To irrigate my dusty arid lands.</p>
+        <p data-m>I would churn the butter,</p>
+        <p data-w1>I would turn the earth.</p>
+        <p data-m data-w1>We could plant a tree inside the garden.</p>
+        <p data-m>Every morning up at dawn, I'd fetch the milk and mow the lawn.</p>
+        <p data-w1>My rosebush will begin to blossom.</p>
+        <p data-m data-w1>The peaches hanging on your trees stay sweet in my memory forever.</p>
+        <p data-m>I have lain in the green green grass of Ireland.</p>
+        <p data-w1 class="backing">I have lain... green grass, green grass of Ireland.</p>
+        <p data-m>I've plowed the fertile earth of East Africa.</p>
+        <p data-w1 class="backing">I've plowed the fields of Africa. I've sown my seed in foreign land.</p>
+        <p data-m>I've sown my seed in foreign land.</p>
+        <p data-w1 class="backing">I'll return to your vineyard, I'll return to your freeport</p>
+        <p data-m>But I will return, to the vineyards and your sweet red wine.</p>
+        <p data-w1 class="backing">I have lain the green green grass, plowed the fields of Africa, sown my seed in foreign land</p>
+        <p data-m>I'll pitch my tent along your tangled vines.</p>
+        <p data-w1 class="backing">I'll pitch a tent along the vine. Won't you let me come inside?</p>
+        <p data-m data-w1>(Won't you) let me come inside?</p>
+        <p data-m>I'd like to sink my shaft in your South Virginia hills.</p>
+        <p data-m>I dream of all the treasures I would find.</p>
+        <p data-w1>My heart and my soul are copper ore and coal. Precious rubies, chased with things of gold.</p>
+        <p data-m>Overhead the milky way shines across your grassy fields.</p>
+        <p data-w1>The Moon is rising full in front of me.</p>
+        <p data-m>I will pass the hours wrapped beneath your stars.</p>
+        <p data-w1>'Till morning light sends you on your way.</p>
+        <p data-m data-w1>Memories of buried gold bring me back again to dig that further.</p>
+        <p data-m>I have seen sapphires blue and emeralds green,</p>
+        <p data-w1 class="backing">I have seen sapphires blue and emeralds green, milk-white pearls from the China sea.</p>
+        <p data-m>Milk-white pearls from the China sea.</p>
+        <p data-w1 class="backing">Drilled for oil around the globe.</p>
+        <p data-m>I've drilled for oil across the globe.</p>
+        <p data-w1 class="backing">Sapphires blue and emeralds green, I'll return to the cave</p>
+        <p data-m>But I will return to the cave wherein your treasures lie.</p>
+        <p data-w1 class="backing">Pan for gold across the side, I have seen the sapphires blue, I have seen emeralds green, I find pearls of the China sea</p>
+        <p data-m>I'll pan for gold across your mountainside.</p>
+        <p data-w1 class="backing">Drill for oil around the globe, pan for gold on mountainside</p>
+        <p data-m data-w1>(Won't you) let me come inside?</p>
     </details>
     <details>
         <summary>One Down</summary>
-        <p>Angels fall like dying birds.</p>
-        <p>Land at our feet gasping for breath.</p>
-        <p>They are poor substitutes for our pets.</p>
-        <p>Half the morning is gone, armies have been razed and destroyed, razed and destroyed.</p>
-        <p>Calcified remains of men harden by the eternal sun.</p>
-        <p>Lie mutely on the ground as we walk by.</p>
-        <p>Overhead the mockingbirds sing titty songs.</p>
-        <p>And every mocking tune is a song for me and you.</p>
-        <p>Listing through the afternoon until the sky sends us to bed.</p>
-        <p>Behind your beautiful brown eyes I perceive centuries, centuries gone by.</p>
-        <p>And the camera of my eye zooms in.</p>
-        <p>Zooms in.</p>
-        <p>Zooms in.</p>
-        <p>Zooms in.</p>
-        <p>Zooms in.</p>
-        <p>Zooms in.</p>
-        <p>Zooms in.</p>
-        <p>Zooms in.</p>
+        <p data-m>Angels fall like dying birds.</p>
+        <p data-m>Land at our feet gasping for breath.</p>
+        <p data-m>They are poor substitutes for our pets.</p>
+        <p data-m data-w1>Half the morning is gone, armies have been razed and destroyed, razed and destroyed.</p>
+        <p data-m>Calcified remains of men harden by the eternal sun.</p>
+        <p data-m>Lie mutely on the ground as we walk by.</p>
+        <p data-m data-w1>Overhead the mockingbirds sing titty songs.</p>
+        <p data-m data-w1>And every mocking tune is a song for me and you.</p>
+        <p data-m>Listing through the afternoon until the sky sends us to bed.</p>
+        <p data-m data-w1>Behind your beautiful brown eyes</p>
+        <p data-m data-w1>I perceive centuries</p>
+        <p data-m data-w1>Centuries gone by</p>
+        <p data-m data-w1>And the camera of my eye zooms in.</p>
+        <p data-m data-w1>Zooms in.</p>
+        <p data-m data-w1>Zooms in.</p>
+        <p data-m data-w1>Zooms in.</p>
+        <p data-m data-w1>Zooms in.</p>
+        <p data-m data-w1>Zooms in.</p>
+        <p data-m data-w1>Zooms in.</p>
+        <p data-m>Zooms in.</p>
     </details>
     <details>
         <summary>Depression</summary>
-        <p>You're cheating on me with Depression.</p>
-        <p>I've seen her evil way, and I know.</p>
-        <p>Her deception and ability to linger on,</p>
-        <p>and stuck to what's once mine.</p>
-        <p>Insidious is her occupation,</p>
-        <p>I never saw a craft so finely honed.</p>
-        <p>But a mystified ineptitude can quickly become tight and overwhelming.</p>
-        <p>Why won't you leave her tomorrow?</p>
-        <p>I'll give her one last night to have her way.</p>
-        <p>For I miss you, and I love you.</p>
-        <p>And when you come back, I'll know just what to say.</p>
-        <p>If you won't go I'll have to kill her.</p>
-        <p>I'll leave her bloody corpse for all the rest.</p>
-        <p>So that Anger and Jealousy, Dejection and Bewilderment can witness</p>
-        <p>The consequence.</p>
+        <p data-w1>You're cheating on me with Depression.</p>
+        <p data-w1>I've seen her evil way, and I know.</p>
+        <p data-w1>Her deception and ability to linger on,</p>
+        <p data-w1>and stuck to what's once mine.</p>
+        <p data-w1>Insidious is her occupation,</p>
+        <p data-w1>I never saw a craft so finely honed.</p>
+        <p data-w1>But a mystified ineptitude can quickly become tight and overwhelming.</p>
+        <p data-w1>Why won't you leave her tomorrow?</p>
+        <p data-w1>I'll give her one last night to have her way.</p>
+        <p data-w1>For I miss you, and I love you.</p>
+        <p data-w1>And when you come back, I'll know just what to say.</p>
+        <p data-w1>If you won't go I'll have to kill her.</p>
+        <p data-w1>I'll leave her bloody corpse for all the rest.</p>
+        <p data-w1>So that Anger and Jealousy, Dejection and Bewilderment can witness</p>
+        <p data-w1>The consequence.</p>
     </details>
     <details>
         <summary>Death Rolls In</summary>
-        <p>Death rolls in across the water,</p>
-        <p>Grueling slow, grueling slow...</p>
-        <p>Death rolls in across the water,</p>
-        <p>Grueling slow, grueling slow...</p>
-        <p>I ain't got time to worry anymore.</p>
-        <p>I ain't got time to worry anymore.</p>
-        <p>How am I supposed to carry this great weight, all alone?</p>
-        <p>How am I supposed to carry this great weight, all alone?</p>
-        <p>I ain't got time to worry anymore...</p>
-        <p>I ain't got time to worry anymore.</p>
-        <p>Death rolls in across the water,</p>
-        <p>Death rolls in across the water,</p>
-        <p>Grueling slow, grueling slow...</p>
-        <p>Death rolls in across the water,</p>
-        <p>Grueling slow, grueling slow...</p>
-        <p>Let it roll, grueling slow.</p>
-        <p>Let it roll, grueling slow.</p>
-        <p>Let it roll, grueling slow.</p>
-        <p>Let it roll, grueling slow.</p>
-        <p>Let it roll, grueling slow...</p>
+        <p data-w2>Death rolls in across the water,</p>
+        <p data-w2>Grueling slow, grueling slow...</p>
+        <p data-w2>Death rolls in across the water,</p>
+        <p data-w2>Grueling slow, grueling slow...</p>
+        <p data-w1 data-w2>I ain't got time to worry anymore.</p>
+        <p data-w1 data-w2>I ain't got time to worry anymore.</p>
+        <p data-w1 data-w2 data-m>How am I supposed to carry this great weight, all alone?</p>
+        <p data-w1 data-w2 data-m>How am I supposed to carry this great weight, all alone?</p>
+        <p data-w1 data-w2 data-m>I ain't got time to worry anymore...</p>
+        <p data-w1 data-w2 data-m>I ain't got time to worry anymore.</p>
+        <p data-w2>Death rolls in across the water,</p>
+        <p data-w1>Grueling slow, grueling slow...</p>
+        <p data-w1 data-w2 data-m>Death rolls in across the water,</p>
+        <p data-w1 data-w2 data-m>Grueling slow, grueling slow...</p>
+        <p data-w1>Let it roll, grueling slow.</p>
+        <p data-w1>Let it roll, grueling slow.</p>
+        <p data-w1>Let it roll, grueling slow.</p>
+        <p data-w1>Let it roll, grueling slow.</p>
+        <p data-w1>Let it roll, grueling slow...</p>
     </details>
     <details>
         <summary>Dragonfly</summary>
@@ -381,214 +403,232 @@
         <p>The world would still exist without accomplishments</p>
         <p>The sun would rise and set, the stars would shine the same</p>
         <p>If you are the last one left please bury your remains</p>
-        <p title="Woman">The world would still exist without accomplishments</p>
-        <p title="Man" class="backing">Plow the earth and plant some seeds. Go to church and pray for rain</p>
-        <p title="Woman">The sun would rise and set, the stars would shine the same</p>
-        <p title="Man" class="backing">See the stars above our head while held against the ground</p>
-        <p title="Woman">If you are the last one left please bury your remains</p>
-        <p title="Man" class="backing">Plow the earth and plant some seeds. Go to church and pray for rain</p>
-        <p title="Woman">The sun would rise and set, the stars would shine the same</p>
-        <p title="Man" class="backing">See the stars above our head while held against the ground</p>
-        <p title="Woman">The sun would rise and set, the stars would shine the same</p>
-        <p title="Man" class="backing">Plow the earth and plant some seeds. Go to church and pray for rain</p>
-        <p title="Woman">The sun would rise and set, the stars would shine the same</p>
-        <p title="Man" class="backing">See the stars above our head while held against the ground</p>
-        <p title="Man and Woman together">If you are the last one left please bury your remains.</p>
+        <p data-w1>The world would still exist without accomplishments</p>
+        <p data-m class="backing">Plow the earth and plant some seeds. Go to church and pray for rain</p>
+        <p data-w1>The sun would rise and set, the stars would shine the same</p>
+        <p data-m class="backing">See the stars above our head while held against the ground</p>
+        <p data-w1>If you are the last one left please bury your remains</p>
+        <p data-m class="backing">Plow the earth and plant some seeds. Go to church and pray for rain</p>
+        <p data-w1>The sun would rise and set, the stars would shine the same</p>
+        <p data-m class="backing">See the stars above our head while held against the ground</p>
+        <p data-w1>The sun would rise and set, the stars would shine the same</p>
+        <p data-m class="backing">Plow the earth and plant some seeds. Go to church and pray for rain</p>
+        <p data-w1>The sun would rise and set, the stars would shine the same</p>
+        <p data-m class="backing">See the stars above our head while held against the ground</p>
+        <p data-m data-w1>If you are the last one left please bury your remains.</p>
     </details>
     <details>
         <summary>Lanterns</summary>
-        <p>I chase lanterns in the air</p>
-        <p>I chase visions through the heart</p>
-        <p>I make love by candlelight</p>
-        <p>I burn like a candle bright</p>
-        <p>I have empires in my blood</p>
-        <p>I have feelings like a flood</p>
-        <p>There were some who called your name</p>
-        <p>There were some who called your name</p>
-        <p>Can you see through me?</p>
-        <p class="backing">We burn candles in the dark</p>
-        <p>When there's fear through me</p>
-        <p class="backing">Running circles around the heart</p>
-        <p>I know a girl who says she's strong</p>
-        <p>Been a woman for so long</p>
-        <p class="backing">There were some who called your name</p>
-        <p>A woman for so long.</p>
-        <p>I saw a boy behind a truck</p>
-        <p>Who wanted nothing less than life</p>
-        <p>What a mess that whole thing was</p>
-        <p>I could see for him no god</p>
-        <p>He had empires in his blood</p>
-        <p>He had feelings like a flood</p>
-        <p>There were some who called your name</p>
-        <p>There were some who called your name</p>
-        <p>Can you see through me?</p>
-        <p class="backing">We burn candles in the dark</p>
-        <p>When there's fear through me</p>
-        <p class="backing">Running circles around the heart</p>
-        <p>I know a girl who says she's strong</p>
-        <p>Been a woman for so long</p>
-        <p class="backing">There were some who called your name</p>
-        <p>A woman for so long.</p>
-        <p>And the man up at the head</p>
-        <p>Says he wants nothing less than life</p>
-        <p>And the bible in his hand</p>
-        <p>Grants him god's grace and give him rights</p>
-        <p>He has empires in his blood</p>
-        <p>He has feelings like a flood</p>
-        <p>There were some who called your name</p>
-        <p>There were some who called your name</p>
-        <p>Can you see through me?</p>
-        <p class="backing">We burn candles in the dark</p>
-        <p>When there's fear through me</p>
-        <p class="backing">Running circles around the heart</p>
-        <p>I know a girl who says she's strong</p>
-        <p>Been a woman for so long</p>
-        <p>There were some who called your name</p>
-        <p>A woman for so long...</p>
+        <p data-w1>I chase lanterns in the air</p>
+        <p data-w1>I chase visions through the heart</p>
+        <p data-w1>I make love by candlelight</p>
+        <p data-w1>I burn like a candle bright</p>
+        <p data-w1>I have empires in my blood</p>
+        <p data-w1>I have feelings like a flood</p>
+        <p data-w1>There were some who called your name</p>
+        <p data-w1>There were some who called your name</p>
+        <p data-w1>Can you see through me?</p>
+        <p data-w1 class="backing">We burn candles in the dark</p>
+        <p data-w1>When there's fear through me</p>
+        <p data-w1 class="backing">Running circles around the heart</p>
+        <p data-w1>I know a girl who says she's strong</p>
+        <p data-w1>Been a woman for so long</p>
+        <p data-w1 class="backing">There were some who called your name</p>
+        <p data-w1>A woman for so long.</p>
+        <p data-w1>I saw a boy behind a truck</p>
+        <p data-w1>Who wanted nothing less than life</p>
+        <p data-w1>What a mess that whole thing was</p>
+        <p data-w1>I could see for him no god</p>
+        <p data-w1>He had empires in his blood</p>
+        <p data-w1>He had feelings like a flood</p>
+        <p data-w1>There were some who called your name</p>
+        <p data-w1>There were some who called your name</p>
+        <p data-w1>Can you see through me?</p>
+        <p data-w1 class="backing">We burn candles in the dark</p>
+        <p data-w1>When there's fear through me</p>
+        <p data-w1 class="backing">Running circles around the heart</p>
+        <p data-w1>I know a girl who says she's strong</p>
+        <p data-w1>Been a woman for so long</p>
+        <p data-w1 class="backing">There were some who called your name</p>
+        <p data-w1>A woman for so long.</p>
+        <p data-w1>And the man up at the head</p>
+        <p data-w1>Says he wants nothing less than life</p>
+        <p data-w1>And the bible in his hand</p>
+        <p data-w1>Grants him god's grace and give him rights</p>
+        <p data-w1>He has empires in his blood</p>
+        <p data-w1>He has feelings like a flood</p>
+        <p data-w1>There were some who called your name</p>
+        <p data-w1>There were some who called your name</p>
+        <p data-w1>Can you see through me?</p>
+        <p data-w1 class="backing">We burn candles in the dark</p>
+        <p data-w1>When there's fear through me</p>
+        <p data-w1 class="backing">Running circles around the heart</p>
+        <p data-w1>I know a girl who says she's strong</p>
+        <p data-w1>Been a woman for so long</p>
+        <p data-w1>There were some who called your name</p>
+        <p data-w1>A woman for so long...</p>
     </details>
     <details>
         <summary>Open Your Heart</summary>
-        <p>My friend gave me some advice</p>
-        <p>When she sent me some cigarettes in the mail</p>
-        <p>The post office opened them</p>
-        <p>But fortunately the words remain</p>
-        <p>She said:</p>
-        <p>Don't let them see your heart</p>
-        <p>Don't manifest expression that way</p>
-        <p>If it's got to be on your sleeve, your heart</p>
-        <p>Should be blindfolded and costumed in ???</p>
-        <p>Like a plane...</p>
-        <p>The words in her letter stayed obscure</p>
-        <p>For many a year and many a day</p>
-        <p>I remembered them at your show tonight</p>
-        <p>Things didn't go the way you wanted</p>
-        <p>On the ???</p>
-        <p>So maybe I saw through you</p>
-        <p>So maybe I saw through you today</p>
-        <p>Now I can look at you</p>
-        <p>Why would I look into the sun</p>
-        <p>???</p>
-        <p>The sun is a bright bright thing</p>
-        <p>And orbits the sky to light up the day</p>
-        <p>It grows and it makes things die</p>
-        <p>Nourishing and destroying the same</p>
-        <p>But I say</p>
-        <p>Open your heart to me</p>
-        <p>Open your heart to me</p>
-        <p>Open your heart to me</p>
-        <p>Open your heart to me</p>
-        <p>Open your heart to me</p>
-        <p>Open your heart to me</p>
-        <p>Open your heart to me</p>
-        <p>Open your heart to me</p>
-        <p>Open your heart to me</p>
-        <p>Open your heart to me</p>
-        <p>And I say</p>
-        <p>Open your heart to me</p>
-        <p>And I say</p>
-        <p>Open your heart to me</p>
+        <p data-w1>My friend gave me some advice</p>
+        <p data-w1>When she sent me some cigarettes in the mail</p>
+        <p data-w1>The post office opened them</p>
+        <p data-w1>But fortunately the words remain</p>
+        <p data-w1>She said:</p>
+        <p data-w1>Don't let them see your heart</p>
+        <p data-w1>Don't manifest expression that way</p>
+        <p data-w1>If it's got to be on your sleeve, your heart</p>
+        <p data-w1>Should be blindfolded and costumed in ???</p>
+        <p data-w1>Like a plane...</p>
+        <p data-w1>The words in her letter stayed obscure</p>
+        <p data-w1>For many a year and many a day</p>
+        <p data-w1>I remembered them at your show tonight</p>
+        <p data-w1>Things didn't go the way you wanted</p>
+        <p data-w1>On the ???</p>
+        <p data-w1>So maybe I saw through you</p>
+        <p data-w1>So maybe I saw through you today</p>
+        <p data-w1>Now I can look at you</p>
+        <p data-w1>Why would I look into the sun</p>
+        <p data-w1>???</p>
+        <p data-w1>The sun is a bright bright thing</p>
+        <p data-w1>And orbits the sky to light up the day</p>
+        <p data-w1>It grows and it makes things die</p>
+        <p data-w1>Nourishing and destroying the same</p>
+        <p data-w1>But I say</p>
+        <p data-w1>Open your heart to me</p>
+        <p data-w1>Open your heart to me</p>
+        <p data-w1>Open your heart to me</p>
+        <p data-w1>Open your heart to me</p>
+        <p data-w1>Open your heart to me</p>
+        <p data-w1>Open your heart to me</p>
+        <p data-w1>Open your heart to me</p>
+        <p data-w1>Open your heart to me</p>
+        <p data-w1>Open your heart to me</p>
+        <p data-w1>Open your heart to me</p>
+        <p data-w1>And I say</p>
+        <p data-w1>Open your heart to me</p>
+        <p data-w1>And I say</p>
+        <p data-w1>Open your heart to me</p>
     </details>
     <details>
         <summary>Hollow Bones</summary>
-        <p>Lines have been drawn</p>
-        <p>Battles rage on</p>
-        <p>What they don't realize</p>
-        <p>It's that there's things in life worth fighting for</p>
-        <p>But this isn't one of them</p>
-        <p>Hollowed bones are in</p>
-        <p>Wings and feathered skin</p>
-        <p>What we don't realize</p>
-        <p>Is that our feathered friends once walked this earth</p>
-        <p>In suits of shiny scales</p>
-        <p>The heads of your gods will hang in our hotels</p>
-        <p>The heads of your gods will hang in our hotels</p>
-        <p>The heads of your gods will hang in our hotels</p>
-        <p>In solemn stays</p>
-        <p>Where our drunken pilgrims congregate</p>
-        <p>In vast profusion</p>
-        <p>Someday we're gonna wake up</p>
-        <p>Someday we're gonna wake up</p>
-        <p>As we contemplate</p>
-        <p>The emptiness of space</p>
-        <p>What we don't realize</p>
-        <p>Is that the stars that we were wishing on</p>
-        <p>Are already gone</p>
-        <p>The heads of our gods will hang in your hotels</p>
-        <p>The heads of our gods will hang in your hotels</p>
-        <p>The heads of our gods will hang in your hotels</p>
-        <p>The heads of our gods will hang in your hotels</p>
-        <p>In solemn stays</p>
-        <p>Where our drunken pilgrims congregate</p>
-        <p>Until the next time</p>
-        <p>Someday we're gonna wake up</p>
-        <p>Someday we're gonna wake up...</p>
+        <p data-w1>Lines have been drawn</p>
+        <p data-w1>Battles rage on</p>
+        <p data-w1>What they don't realize</p>
+        <p data-w1>It's that there's things in life worth fighting for</p>
+        <p data-w1>But this isn't one of them</p>
+        <p data-w1>Hollowed bones are in</p>
+        <p data-w1>Wings and feathered skin</p>
+        <p data-w1>What we don't realize</p>
+        <p data-w1>Is that our feathered friends once walked this earth</p>
+        <p data-w1>In suits of shiny scales</p>
+        <p data-w1>The heads of your gods will hang in our hotels</p>
+        <p data-w1>The heads of your gods will hang in our hotels</p>
+        <p data-w1>The heads of your gods will hang in our hotels</p>
+        <p data-w1>In solemn stays</p>
+        <p data-w1>Where our drunken pilgrims congregate</p>
+        <p data-w1>In vast profusion</p>
+        <p data-w1>Someday we're gonna wake up</p>
+        <p data-w1>Someday we're gonna wake up</p>
+        <p data-w1>As we contemplate</p>
+        <p data-w1>The emptiness of space</p>
+        <p data-w1>What we don't realize</p>
+        <p data-w1>Is that the stars that we were wishing on</p>
+        <p data-w1>Are already gone</p>
+        <p data-w1>The heads of our gods will hang in your hotels</p>
+        <p data-w1>The heads of our gods will hang in your hotels</p>
+        <p data-w1>The heads of our gods will hang in your hotels</p>
+        <p data-w1>The heads of our gods will hang in your hotels</p>
+        <p data-w1>In solemn stays</p>
+        <p data-w1>Where our drunken pilgrims congregate</p>
+        <p data-w1>Until the next time</p>
+        <p data-w1>Someday we're gonna wake up</p>
+        <p data-w1>Someday we're gonna wake up...</p>
     </details>
     <details>
         <summary>Isabella</summary>
-        <p>If you could not see the sun</p>
-        <p>You would cry</p>
-        <p>If you had no room to run</p>
-        <p>You would die</p>
-        <p>If you cannot find your way</p>
-        <p>On the ground</p>
-        <p>Drink your tears</p>
-        <p>Catch your breath</p>
-        <p>And fly</p>
-        <p>If the sky should fall today</p>
-        <p>You would cry</p>
-        <p>If the moon were full tonight</p>
-        <p>You would die</p>
-        <p>And if the stars get in your eyes</p>
-        <p>And your are blind</p>
-        <p>Drink your tears</p>
-        <p>Catch your breath</p>
-        <p>And fly</p>
-        <p>Fly into the sky</p>
-        <p>If I could not see your face</p>
-        <p>I would cry</p>
-        <p>And if you cannot face the day</p>
-        <p>You will die</p>
-        <p>So if you have to go away</p>
-        <p>From this place</p>
-        <p>Drink your tears</p>
-        <p>Catch your breath</p>
-        <p>And fly</p>
-        <p>Fly into the sun</p>
-        <p></p>
+        <p data-m>If you could not see the sun</p>
+        <p data-m>You would cry</p>
+        <p data-m>If you had no room to run</p>
+        <p data-m>You would die</p>
+        <p data-m>If you cannot find your way</p>
+        <p data-m>On the ground</p>
+        <p data-m data-w1>Drink your tears</p>
+        <p data-m data-w1>Catch your breath</p>
+        <p data-m data-w1>And fly</p>
+        <p data-m>If the sky should fall today</p>
+        <p data-m>You would cry</p>
+        <p data-m>If the moon were full tonight</p>
+        <p data-m>You would die</p>
+        <p data-m>And if the stars get in your eyes</p>
+        <p data-m data-w1>And your are blind</p>
+        <p data-m data-w1>Drink your tears</p>
+        <p data-m data-w1>Catch your breath</p>
+        <p data-m data-w1>And fly</p>
+        <p data-m data-w1>Fly into the sky</p>
+        <p data-m>If I could not see your face</p>
+        <p data-m>I would cry</p>
+        <p data-m>And if you cannot face the day</p>
+        <p data-m>You will die</p>
+        <p data-m>So if you have to go away</p>
+        <p data-m data-w1>From this place</p>
+        <p data-m data-w1>Drink your tears</p>
+        <p data-m data-w1>Catch your breath</p>
+        <p data-m data-w1>And fly</p>
+        <p data-m data-w1>Fly into the sun</p>
     </details>
     <details>
         <summary>You've Got to Pay Attention</summary>
-        <p>You've got to pay attention to the water</p>
-        <p>You've got to pay attention to the wind</p>
-        <p>You've got to pay attention to the weather</p>
-        <p>For the salt and the sea</p>
-        <p>Will make every man like me</p>
-        <p>And the color of the sky</p>
-        <p>And the threat of hail and snow and ice</p>
-        <p>And the wise and the sons are not the only ones</p>
-        <p>For the fish and the sea, our most exacting family</p>
-        <p>You've got to pay attention to the water</p>
-        <p>You've got to pay attention to the wind</p>
-        <p>You've got to pay attention to the weather</p>
-        <p>If you don't, you may end up like me</p>
-        <p>They took my wife and my son</p>
-        <p>Now I don't got no one</p>
-        <p>And the wind and the sail</p>
-        <p>Became my one protecting veil</p>
-        <p>And my sword and my eye</p>
-        <p>Are now the only laws that I abide by</p>
-        <p>Don't mock with me, I'll surely take you down</p>
-        <p>And the gull might tell you so</p>
-        <p>And the crab might tell you so</p>
-        <p>And the shark might tell you so</p>
-        <p>And the shell might tell you so</p>
-        <p>And the fish might tell you so</p>
-        <p>And the plank might tell you so</p>
-        <p>And the wheel might tell you so</p>
-        <p>And the lamp might tell you so</p>
-        <p>And the book might tell you so</p>
-        <p>And the night might tell you so</p>
-        <p>And the I might tell you so</p>
+        <p data-w1 data-w2>You've got to pay attention to the water</p>
+        <p data-w1 data-w2>You've got to pay attention to the wind</p>
+        <p data-w1 data-w2>You've got to pay attention to the weather</p>
+        <p data-w1 data-w2>For the salt and the sea</p>
+        <p data-w1 data-w2>Will make every man like me</p>
+        <p data-w1 data-w2>And the color of the sky</p>
+        <p data-w1 data-w2>And the threat of hail and snow and ice</p>
+        <p data-w1 data-w2>And the wise and the sons are not the only ones</p>
+        <p data-w1 data-w2>For the fish and the sea, our most exacting family</p>
+        <p data-w1 data-w2>You've got to pay attention to the water</p>
+        <p data-w1 data-w2>You've got to pay attention to the wind</p>
+        <p data-w1 data-w2>You've got to pay attention to the weather</p>
+        <p data-w1 data-w2>If you don't, you may end up like me</p>
+        <p data-w1 data-w2>They took my wife and my son</p>
+        <p data-w1 data-w2>Now I don't got no one</p>
+        <p data-w1 data-w2>And the wind and the sail</p>
+        <p data-w1 data-w2>Became my one protecting veil</p>
+        <p data-w1 data-w2>And my sword and my eye</p>
+        <p data-w1 data-w2>Are now the only laws that I abide by</p>
+        <p data-w1 data-w2>Don't mock with me, I'll surely take you down</p>
+        <p data-w1>And the gull might tell you so</p>
+        <p data-w1>And the crab might tell you so</p>
+        <p data-w1>And the shark might tell you so</p>
+        <p data-w1 class="backing">You've got to pay attention</p>
+        <p data-w2 class="backing">To the water</p>
+        <p data-w1>And the shell might tell you so</p>
+        <p data-w1 class="backing">You've got to pay attention</p>
+        <p data-w2 class="backing">To the water</p>
+        <p data-w1>And the fish might tell you so</p>
+        <p data-w1 class="backing">You've got to pay attention</p>
+        <p data-w2 class="backing">To the water</p>
+        <p data-w1>And the plank might tell you so</p>
+        <p data-w1 class="backing">You've got to pay attention</p>
+        <p data-w2 class="backing">To the water</p>
+        <p data-w1>And the wheel might tell you so</p>
+        <p data-w1 class="backing">You've got to pay attention</p>
+        <p data-w2 class="backing">To the water</p>
+        <p data-w1>And the lamp might tell you so</p>
+        <p data-w1 class="backing">You've got to pay attention</p>
+        <p data-w2 class="backing">To the water</p>
+        <p data-w1>And the book might tell you so</p>
+        <p data-w1 class="backing">You've got to pay attention</p>
+        <p data-w2 class="backing">To the water</p>
+        <p data-w1>And the night might tell you so</p>
+        <p data-w1 class="backing">You've got to pay attention</p>
+        <p data-w2 class="backing">To the water</p>
+        <p data-w1>And the I might tell you so</p>
+        <p data-w1 class="backing">You've got to pay attention</p>
+        <p data-w2 class="backing">To the water</p>
+        <p data-w2>To the water</p>
     </details>
     <details>
         <summary>WWLD</summary>
@@ -598,64 +638,64 @@
                 that being the name of the male singer in the band.
             </p>
         </aside>
-        <p>What would I do without a dime to my name</p>
-        <p>I'd walk the streets all alone</p>
-        <p>I'd spend my time watching night become day</p>
-        <p>I'd bask in the sun and I'd hide from the rain</p>
-        <p>I'd hide from the rain</p>
-        <p>Where would I go if I didn't have a home</p>
-        <p>No place of my own</p>
-        <p>I'd sleep in a doorway with some other boy</p>
-        <p>Who's lost his soul</p>
-        <p>And he's afraid to die</p>
-        <p>And so am I</p>
-        <p>Who would I be if I didn't have a name</p>
-        <p>Just another face</p>
-        <p>I'd be pushed aside because I'm always in the way</p>
-        <p>Nobody knows me but I always catch the blame</p>
-        <p>I always catch the blame</p>
-        <p>And how would I listen if I didn't have an ear</p>
-        <p>I couldn't hear you crying</p>
-        <p>For what it's worth you know I'd sell my soul</p>
-        <p>To buy you a jacket and keep you from the cold</p>
-        <p>I'd keep you from the cold</p>
+        <p data-m>What would I do without a dime to my name</p>
+        <p data-m>I'd walk the streets all alone</p>
+        <p data-m>I'd spend my time watching night become day</p>
+        <p data-m>I'd bask in the sun and I'd hide from the rain</p>
+        <p data-m>I'd hide from the rain</p>
+        <p data-m>Where would I go if I didn't have a home</p>
+        <p data-m>No place of my own</p>
+        <p data-m>I'd sleep in a doorway with some other boy</p>
+        <p data-m>Who's lost his soul</p>
+        <p data-m>And he's afraid to die</p>
+        <p data-m>And so am I</p>
+        <p data-m>Who would I be if I didn't have a name</p>
+        <p data-m>Just another face</p>
+        <p data-m>I'd be pushed aside because I'm always in the way</p>
+        <p data-m>Nobody knows me but I always catch the blame</p>
+        <p data-m>I always catch the blame</p>
+        <p data-m>And how would I listen if I didn't have an ear</p>
+        <p data-m>I couldn't hear you crying</p>
+        <p data-m>For what it's worth you know I'd sell my soul</p>
+        <p data-m>To buy you a jacket and keep you from the cold</p>
+        <p data-m>I'd keep you from the cold</p>
     </details>
     <details>
         <summary>Voice of the Future</summary>
         <aside>
             <p>This is from 2008, works exactly as well if not better nowadays.</p>
         </aside>
-        <p title="Woman">We like the videogames</p>
-        <p title="Woman">Disenchanted with the voice of the future again</p>
-        <p title="Woman">I hear you calling but I can't see at all</p>
-        <p title="Woman">Tie the wires and turn up the microphone</p>
-        <p title="Woman">One false move and you're taking the fall</p>
-        <p title="Woman">You're taking the fall</p>
-        <p title="Woman">You're taking the fall</p>
-        <p title="Man">Disenchanted with the voice of the future again</p>
-        <p title="Man">A sour breeze that reeks of death and decay</p>
-        <p title="Man and Woman together">I hear it whispering its lies in my ear</p>
-        <p title="Man and Woman together">What lies in my heart is not for it to know today</p>
-        <p title="Man and Woman together">Is not for it to know today</p>
-        <p title="Man and Woman together">Is not for it to know today</p>
-        <p title="Man">Old angry men are telling me to beware</p>
-        <p title="Woman">Old angry men are telling me to behave</p>
-        <p title="Man and Woman together">The nature's children are uniformly worthless</p>
-        <p title="Man and Woman together">With runny noses and their videogames</p>
-        <p title="Man">I like the videogames</p>
-        <p title="Man and Woman together">We like their videogames</p>
-        <p title="Man and Woman together">Turn on the TV and turn up the AC</p>
-        <p title="Man and Woman together">Hide in our houses while the Earth coughs and moans</p>
-        <p title="Man and Woman together">We say our prayer for the billions of people</p>
-        <p title="Man and Woman together">In crappy countries without HBO</p>
-        <p title="Man and Woman together">We like our HBO</p>
-        <p title="Man and Woman together">We like our HBO</p>
-        <p title="Man">There is no purpose in killing the president</p>
-        <p title="Man and Woman together">The world is full of fuckers just like him</p>
-        <p title="Man and Woman together">Sowing seeds of fear and watered with lies</p>
-        <p title="Man and Woman together">Fertilized with shit they speak from within their hearts</p>
-        <p title="Man and Woman together">They speak from within their hearts</p>
-        <p title="Man and Woman together">They speak from within their hearts</p>
+        <p data-w1>We like the videogames</p>
+        <p data-w1>Disenchanted with the voice of the future again</p>
+        <p data-w1>I hear you calling but I can't see at all</p>
+        <p data-w1>Tie the wires and turn up the microphone</p>
+        <p data-w1>One false move and you're taking the fall</p>
+        <p data-w1>You're taking the fall</p>
+        <p data-w1>You're taking the fall</p>
+        <p data-m>Disenchanted with the voice of the future again</p>
+        <p data-m>A sour breeze that reeks of death and decay</p>
+        <p data-m data-w1>I hear it whispering its lies in my ear</p>
+        <p data-m data-w1>What lies in my heart is not for it to know today</p>
+        <p data-m data-w1>Is not for it to know today</p>
+        <p data-m data-w1>Is not for it to know today</p>
+        <p data-m>Old angry men are telling me to beware</p>
+        <p data-w1>Old angry men are telling me to behave</p>
+        <p data-m data-w1>The nature's children are uniformly worthless</p>
+        <p data-m data-w1>With runny noses and their videogames</p>
+        <p data-m>I like the videogames</p>
+        <p data-m data-w1>We like their videogames</p>
+        <p data-m data-w1>Turn on the TV and turn up the AC</p>
+        <p data-m data-w1>Hide in our houses while the Earth coughs and moans</p>
+        <p data-m data-w1>We say our prayer for the billions of people</p>
+        <p data-m data-w1>In crappy countries without HBO</p>
+        <p data-m data-w1>We like our HBO</p>
+        <p data-m data-w1>We like our HBO</p>
+        <p data-m>There is no purpose in killing the president</p>
+        <p data-m data-w1>The world is full of fuckers just like him</p>
+        <p data-m data-w1>Sowing seeds of fear and watered with lies</p>
+        <p data-m data-w1>Fertilized with shit they speak from within their hearts</p>
+        <p data-m data-w1>They speak from within their hearts</p>
+        <p data-m data-w1>They speak from within their hearts</p>
     </details>
 </section>
 <footer>
