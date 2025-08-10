@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="035e9d4c-11ff-4a4b-a0eb-0c2ea5fdd3b4" name="Changes" comment="Remove useless header, synology doesnt pass it through">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notes/listing-ship-lyrics.html" beforeDir="false" afterPath="$PROJECT_DIR$/notes/listing-ship-lyrics.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +43,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/notes" />
       <recent name="$PROJECT_DIR$/templates" />
     </key>
   </component>
@@ -89,7 +91,8 @@
       <workItem from="1753795902040" duration="933000" />
       <workItem from="1754103459941" duration="95000" />
       <workItem from="1754279942713" duration="17000" />
-      <workItem from="1754516176599" duration="12979000" />
+      <workItem from="1754516176599" duration="13627000" />
+      <workItem from="1754843363742" duration="3222000" />
     </task>
     <task id="LOCAL-00001" summary="New wack effect, fixed link spacing, versatile link handling">
       <option name="closed" value="true" />

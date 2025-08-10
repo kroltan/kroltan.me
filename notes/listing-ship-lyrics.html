@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Listing Ship song lyrics</title>
     <style>
+        * {
+            box-sizing: border-box;
+        }
         :root {
             width: 100%;
             max-width: 40rem;
@@ -27,25 +30,29 @@
             position: relative;
 
             margin: 1rem;
-            padding: 0.5rem;
             border: 1px solid black;
             border-radius: 0.5rem;
+            background: white;
 
             overflow: visible;
+            box-shadow: 0.5rem 0.5rem 2rem -0.5rem rgba(0, 0, 0, 0.3);
         }
 
         details summary {
+            padding: 0.5rem;
             font-weight: bold;
             cursor: pointer;
         }
 
         details > p {
-            max-width: calc(100% - 10rem);
+            max-width: calc(100% - 5rem);
         }
 
         aside {
+            float: right;
             width: 15rem;
             padding: 0.5rem;
+            margin-left: 1rem;
 
             font-size: calc(1em - 2pt);
             background: wheat;
@@ -55,26 +62,60 @@
 
         @media (min-width: 60rem) {
             details aside {
-                position: absolute;
-                left: calc(100% - 5rem);
-                right: unset;
+                margin-right: -10rem;
+                transform-origin: bottom right;
+                transform: rotate(3deg);
             }
         }
 
         p {
+            position: relative;
             margin: 1em 0 0;
         }
 
+        details p {
+            margin: 0;
+            padding: 0.75rem 0.5rem;
+        }
+
+        details p:first-of-type {
+            margin-top: 0.5rem;
+        }
+
+        details p::before {
+            content: "";
+            position: absolute;
+            right: calc(100% + 0.5rem);
+            width: 100%;
+            height: 100%;
+            margin-top: -0.5rem;
+
+            font-size: 1.5em;
+            text-align: right;
+            vertical-align: center;
+            opacity: 0.5;
+        }
+
         [title~=Man] {
-            color:blue;
+            background: linear-gradient(to right, rgba(0, 0, 255, 0.075), transparent);
         }
+
         [title~=Woman] {
-            color: magenta;
+            background: linear-gradient(to right, rgba(255, 0, 0, 0.075), transparent);
         }
-        [title~=Both] {
-            color: transparent;
-            background: linear-gradient(80deg, blue, magenta 35%);
-            background-clip: text;
+
+        [title~=Man][title~=Woman] {
+            background: linear-gradient(to right, rgba(255, 0, 255, 0.075), transparent);
+        }
+
+        :not([title~=Man]) + [title~=Man]::before {
+            content: "👨" !important;
+        }
+        :not([title~=Woman]) + [title~=Woman]::before {
+            content: "👩" !important;
+        }
+        :not([title~=Man][title~=Woman]) + [title~=Man][title~=Woman]::before {
+            content: "👨👩" !important;
         }
         .backing {
             font-size: calc(1em - 1pt);
@@ -84,10 +125,20 @@
 
         .backing::before { content: "("; }
         .backing::after { content: ")"; }
+
+        header {
+            margin-bottom: 2rem;
+        }
+        footer {
+            margin-top: 2rem;
+        }
+        del {
+            cursor: help;
+        }
     </style>
 </head>
 <body>
-<aside>
+<header>
     <p>I couldn't find these lyrics anywhere on the internet, so here we go, organized by album.</p>
     <p>
         For songs I thought needed it, I've colored in where each speaker is speaking,
@@ -97,7 +148,7 @@
         Please do not scrape this or put it on lyric aggregators.
         I can't enforce that of course, the lyrics ain't mine in the first place, but I can ask.
     </p>
-</aside>
+</header>
 <section>
     <h1>A Hull Full of Oil and Bone</h1>
     <details>
@@ -109,7 +160,7 @@
         <p>Paul is like an archaeologist.</p>
         <p>Dusting with a brush of fingertips.</p>
         <p>It seems as though he's stumbled onto something really odd.</p>
-        <p>His heart goes pitter-patter when he silhouettes the vaults.</p>
+        <p>His heart goes pitter-patter when he silhouettes the <del title="I hear 'au' and 's', guess">vaults</del>.</p>
         <p>Paul is like an archaeologist.</p>
         <p>Paul is like a diamond hardening.</p>
         <p>A short-range crystal order, along centuries.</p>
@@ -171,10 +222,10 @@
         <p title="Woman">To irrigate my dusty arid lands.</p>
         <p title="Man">I would churn the butter,</p>
         <p title="Woman">I would turn the earth.</p>
-        <p title="Both">We could plant a tree inside the garden.</p>
+        <p title="Man and Woman together">We could plant a tree inside the garden.</p>
         <p title="Man">Every morning up at dawn, I'd fetch the milk and mow the lawn.</p>
         <p title="Woman">My rosebush will begin to blossom.</p>
-        <p title="Both">The peaches hanging on your trees stay sweet in my memory forever.</p>
+        <p title="Man and Woman together">The peaches hanging on your trees stay sweet in my memory forever.</p>
         <p title="Man">I have lain in the green green grass of Ireland.</p>
         <p title="Woman" class="backing">I have lain... green grass, green grass of Ireland.</p>
         <p title="Man">I've plowed the fertile earth of East Africa.</p>
@@ -185,7 +236,7 @@
         <p title="Woman" class="backing">I have lain the green green grass, plowed the fields of Africa, sown my seed in foreign land</p>
         <p title="Man">I'll pitch my tent along your tangled vines.</p>
         <p title="Woman" class="backing">I'll pitch a tent along the vine. Won't you let me come inside?</p>
-        <p title="Both">(Won't you) let me come inside?</p>
+        <p title="Man and Woman together">(Won't you) let me come inside?</p>
         <p title="Man">I'd like to sink my shaft in your South Virginia hills.</p>
         <p title="Man">I dream of all the treasures I would find.</p>
         <p title="Woman">My heart and my soul are copper ore and coal. Precious rubies, chased with things of gold.</p>
@@ -193,7 +244,7 @@
         <p title="Woman">The Moon is rising full in front of me.</p>
         <p title="Man">I will pass the hours wrapped beneath your stars.</p>
         <p title="Woman">'Till morning light sends you on your way.</p>
-        <p title="Both">Memories of buried gold bring me back again to dig that further.</p>
+        <p title="Man and Woman together">Memories of buried gold bring me back again to dig that further.</p>
         <p title="Man">I have seen sapphires blue and emeralds green,</p>
         <p title="Woman" class="backing">I have seen sapphires blue and emeralds green, milk-white pearls from the China sea.</p>
         <p title="Man">Milk-white pearls from the China sea.</p>
@@ -204,7 +255,7 @@
         <p title="Woman" class="backing">Pan for gold across the side, I have seen the sapphires blue, I have seen emeralds green, I find pearls of the China sea</p>
         <p title="Man">I'll pan for gold across your mountainside.</p>
         <p title="Woman" class="backing">Drill for oil around the globe, pan for gold on mountainside</p>
-        <p title="Both">(Won't you) let me come inside?</p>
+        <p title="Man and Woman together">(Won't you) let me come inside?</p>
     </details>
     <details>
         <summary>One Down</summary>
@@ -342,7 +393,7 @@
         <p title="Man" class="backing">Plow the earth and plant some seeds. Go to church and pray for rain</p>
         <p title="Woman">The sun would rise and set, the stars would shine the same</p>
         <p title="Man" class="backing">See the stars above our head while held against the ground</p>
-        <p title="Both">If you are the last one left please bury your remains.</p>
+        <p title="Man and Woman together">If you are the last one left please bury your remains.</p>
     </details>
     <details>
         <summary>Lanterns</summary>
@@ -583,28 +634,28 @@
         <p title="Woman">You're taking the fall</p>
         <p title="Man">Disenchanted with the voice of the future again</p>
         <p title="Man">A sour breeze that reeks of death and decay</p>
-        <p title="Both">I hear it whispering its lies in my ear</p>
-        <p title="Both">What lies in my heart is not for it to know today</p>
-        <p title="Both">Is not for it to know today</p>
-        <p title="Both">Is not for it to know today</p>
+        <p title="Man and Woman together">I hear it whispering its lies in my ear</p>
+        <p title="Man and Woman together">What lies in my heart is not for it to know today</p>
+        <p title="Man and Woman together">Is not for it to know today</p>
+        <p title="Man and Woman together">Is not for it to know today</p>
         <p title="Man">Old angry men are telling me to beware</p>
         <p title="Woman">Old angry men are telling me to behave</p>
-        <p title="Both">The nature's children are uniformly worthless</p>
-        <p title="Both">With runny noses and their videogames</p>
+        <p title="Man and Woman together">The nature's children are uniformly worthless</p>
+        <p title="Man and Woman together">With runny noses and their videogames</p>
         <p title="Man">I like the videogames</p>
-        <p title="Both">We like their videogames</p>
-        <p title="Both">Turn on the TV and turn up the AC</p>
-        <p title="Both">Hide in our houses while the Earth coughs and moans</p>
-        <p title="Both">We say our prayer for the billions of people</p>
-        <p title="Both">In crappy countries without HBO</p>
-        <p title="Both">We like our HBO</p>
-        <p title="Both">We like our HBO</p>
+        <p title="Man and Woman together">We like their videogames</p>
+        <p title="Man and Woman together">Turn on the TV and turn up the AC</p>
+        <p title="Man and Woman together">Hide in our houses while the Earth coughs and moans</p>
+        <p title="Man and Woman together">We say our prayer for the billions of people</p>
+        <p title="Man and Woman together">In crappy countries without HBO</p>
+        <p title="Man and Woman together">We like our HBO</p>
+        <p title="Man and Woman together">We like our HBO</p>
         <p title="Man">There is no purpose in killing the president</p>
-        <p title="Both">The world is full of fuckers just like him</p>
-        <p title="Both">Sowing seeds of fear and watered with lies</p>
-        <p title="Both">Fertilized with shit they speak from within their hearts</p>
-        <p title="Both">They speak from within their hearts</p>
-        <p title="Both">They speak from within their hearts</p>
+        <p title="Man and Woman together">The world is full of fuckers just like him</p>
+        <p title="Man and Woman together">Sowing seeds of fear and watered with lies</p>
+        <p title="Man and Woman together">Fertilized with shit they speak from within their hearts</p>
+        <p title="Man and Woman together">They speak from within their hearts</p>
+        <p title="Man and Woman together">They speak from within their hearts</p>
     </details>
 </section>
 <footer>
