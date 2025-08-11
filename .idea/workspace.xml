@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="035e9d4c-11ff-4a4b-a0eb-0c2ea5fdd3b4" name="Changes" comment="Better multi-singer annotation">
+    <list default="true" id="035e9d4c-11ff-4a4b-a0eb-0c2ea5fdd3b4" name="Changes" comment="Simple MRP">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notes/listing-ship-lyrics.html" beforeDir="false" afterPath="$PROJECT_DIR$/notes/listing-ship-lyrics.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pretty.js" beforeDir="false" afterPath="$PROJECT_DIR$/pretty.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +19,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -24,24 +30,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JavaScript Debug.2024-05-28-cool-stuff-in-typescript.html.executor": "Run",
-    "JavaScript Debug.listing-ship-lyrics.html.executor": "Debug",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "/home/kroltan/Projects/kroltan.me",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JavaScript Debug.2024-05-28-cool-stuff-in-typescript.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.listing-ship-lyrics.html.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/kroltan/Projects/kroltan.me&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/notes" />
@@ -94,6 +100,7 @@
       <workItem from="1754279942713" duration="17000" />
       <workItem from="1754516176599" duration="13627000" />
       <workItem from="1754843363742" duration="10625000" />
+      <workItem from="1754924752339" duration="5296000" />
     </task>
     <task id="LOCAL-00001" summary="New wack effect, fixed link spacing, versatile link handling">
       <option name="closed" value="true" />
@@ -167,7 +174,31 @@
       <option name="project" value="LOCAL" />
       <updated>1754846864573</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Homepage style nits">
+      <option name="closed" value="true" />
+      <created>1754883637698</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1754883637698</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Homepage style nits">
+      <option name="closed" value="true" />
+      <created>1754883806432</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1754883806432</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Simple MRP">
+      <option name="closed" value="true" />
+      <created>1754948302566</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1754948302566</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -178,7 +209,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="text">
+                    <value>
+                      <list>
+                        <option value="fun         " />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -193,6 +236,8 @@
     <MESSAGE value="Migrate to netlify.toml redirects" />
     <MESSAGE value="Remove useless header, synology doesnt pass it through" />
     <MESSAGE value="Better multi-singer annotation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Better multi-singer annotation" />
+    <MESSAGE value="Homepage style nits" />
+    <MESSAGE value="Simple MRP" />
+    <option name="LAST_COMMIT_MESSAGE" value="Simple MRP" />
   </component>
 </project>

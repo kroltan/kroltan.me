@@ -18,7 +18,7 @@ function makePretty(fragmentShaderSource, target, uniforms = []) {
             #version 100
             attribute vec2 Position;
             void main() {
-                gl_Position = vec4(Position, 0.0, 0.0);
+                gl_Position = vec4(Position, 0.0, 1.0);
             }
         `,
         fragment: fragmentShaderSource,
