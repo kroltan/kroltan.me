@@ -36,6 +36,7 @@
                         <xsl:value-of select="profile/picture"/>
                     </xsl:attribute>
                 </meta>
+                <meta name="theme-color" content="#1a1918" />
                 <link rel="stylesheet" href="theme.css"/>
                 <link rel="stylesheet" href="wei.css"/>
                 <link rel="stylesheet" media="screen and (prefers-color-scheme: dark)" href="dark.css"/>

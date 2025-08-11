@@ -177,6 +177,11 @@ article > * {
         align-self: unset;
     }
 
+    #about img {
+        float: left;
+        margin-right: 1rem;
+    }
+
     #about table {
         width: unset;
         margin: 0 auto;
