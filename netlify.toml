@@ -20,7 +20,12 @@ status = 200
 
 [[redirects]]
 from = "https://home.kroltan.me/*"
-to = "https://kroltan.synology.me:4000/:splat"
+to = "https://kroltan.synology.me:4433/:splat"
+status = 200
+
+[[redirects]]
+from = "http://home.kroltan.me/*"
+to = "http://kroltan.synology.me:8080/:splat"
 status = 200
 
 [[redirects]]
