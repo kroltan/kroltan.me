@@ -5,7 +5,7 @@ status = 200
 
 [[redirects]]
 from = "https://photos.kroltan.me/*"
-to = "https://kroltan.synology.me:3001/:splat"
+to = "https://home.kroltan.me:3001/:splat"
 status = 200
 
 [[redirects]]
@@ -15,7 +15,7 @@ status = 200
 
 [[redirects]]
 from = "https://gitea.kroltan.me/*"
-to = "https://kroltan.synology.me:3003/:splat"
+to = "https://home.kroltan.me:3003/:splat"
 status = 200
 
 [[redirects]]
