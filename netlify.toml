@@ -10,7 +10,7 @@ status = 200
 
 [[redirects]]
 from = "https://drive.kroltan.me/*"
-to = "https://kroltan.synology.me:3002/:splat"
+to = "https://home.kroltan.me/:splat"
 status = 200
 
 [[redirects]]
