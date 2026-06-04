@@ -19,6 +19,11 @@ to = "https://home.kroltan.me:3003/:splat"
 status = 200
 
 [[redirects]]
+from = "https://git.kroltan.me/*"
+to = "https://home.kroltan.me:3004/:splat"
+status = 200
+
+[[redirects]]
 from = "/"
 to = "/index.xml"
 status = 200
