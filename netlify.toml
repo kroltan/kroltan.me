@@ -1,26 +1,36 @@
 [[redirects]]
 from = "/minecraft/map/*"
 to = "http://home.kroltan.me:59861/:splat"
+force = true
+signed = "GABBRO_JWS_KEY"
 status = 200
 
 [[redirects]]
 from = "https://photos.kroltan.me/*"
 to = "https://home.kroltan.me:3001/:splat"
+force = true
+signed = "GABBRO_JWS_KEY"
 status = 200
 
 [[redirects]]
 from = "https://drive.kroltan.me/*"
 to = "https://home.kroltan.me:3002/:splat"
+force = true
+signed = "GABBRO_JWS_KEY"
 status = 200
 
 [[redirects]]
 from = "https://gitea.kroltan.me/*"
 to = "https://home.kroltan.me:3003/:splat"
+force = true
+signed = "GABBRO_JWS_KEY"
 status = 200
 
 [[redirects]]
 from = "https://git.kroltan.me/*"
 to = "https://home.kroltan.me:3004/:splat"
+force = true
+signed = "GABBRO_JWS_KEY"
 status = 200
 
 [[redirects]]
