@@ -11,6 +11,7 @@ to = "https://home.kroltan.me:3001/:splat"
 force = true
 signed = "GABBRO_JWS_KEY"
 status = 200
+headers = { X-Forwarded-Host = "photos.kroltan.me" }
 
 [[redirects]]
 from = "https://drive.kroltan.me/*"
@@ -18,6 +19,7 @@ to = "https://home.kroltan.me:3002/:splat"
 force = true
 signed = "GABBRO_JWS_KEY"
 status = 200
+headers = { X-Forwarded-Host = "drive.kroltan.me" }
 
 [[redirects]]
 from = "https://gitea.kroltan.me/*"
@@ -25,6 +27,7 @@ to = "https://home.kroltan.me:3003/:splat"
 force = true
 signed = "GABBRO_JWS_KEY"
 status = 200
+headers = { X-Forwarded-Host = "gitea.kroltan.me" }
 
 [[redirects]]
 from = "https://git.kroltan.me/*"
@@ -32,6 +35,7 @@ to = "https://home.kroltan.me:3004/:splat"
 force = true
 signed = "GABBRO_JWS_KEY"
 status = 200
+headers = { X-Forwarded-Host = "git.kroltan.me" }
 
 [[redirects]]
 from = "/"
