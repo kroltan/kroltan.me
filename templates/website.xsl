@@ -11,6 +11,7 @@
                     <xsl:value-of select="profile/name"/>
                 </title>
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
+                <meta name="ocs-site-verification" content="7dc8e1c223109c97ad29e0262fc01ac7" />
                 <meta name="description">
                     <xsl:attribute name="content">
                         <xsl:value-of select="profile/introduction"/>
