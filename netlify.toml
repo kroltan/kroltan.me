@@ -38,6 +38,14 @@ status = 200
 headers = { X-Forwarded-Host = "git.kroltan.me" }
 
 [[redirects]]
+from = "https://stream.kroltan.me/*"
+to = "https://home.kroltan.me:3005/:splat"
+force = true
+signed = "GABBRO_JWS_KEY"
+status = 200
+headers = { X-Forwarded-Host = "stream.kroltan.me" }
+
+[[redirects]]
 from = "/"
 to = "/index.xml"
 status = 200
