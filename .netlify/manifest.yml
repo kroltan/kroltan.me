@@ -1,0 +1,8 @@
+name: kroltan-local-build
+inputs:
+  - name: forwards
+    description: Mapping of public to internal hosts to be proxied
+    required: true
+  - name: forwards_key_env
+    description: Name of the environment variable containing the JWS signing key
+    required: true
