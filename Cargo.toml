@@ -1,0 +1,10 @@
+[package]
+name = "website"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+glob = "0.3"
+libxml = "0.3"
+libxslt = "0.1"
+color-eyre = "0.6"

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
-<?xml-stylesheet type="text/xsl" href="templates/website.xsl" ?>
+<?xml-stylesheet type="text/xsl" href="templates/index.xsl" ?>
 <root>
     <profile>
         <name>Leonardo Giovanni Scur</name>

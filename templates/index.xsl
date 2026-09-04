@@ -5,6 +5,7 @@
     <xsl:output method="html"/>
 
     <xsl:template match="/root">
+        <xsl:text disable-output-escaping="yes">&lt;!DOCTYPE html&gt;</xsl:text>
         <html>
             <head>
                 <title>

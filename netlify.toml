@@ -1,3 +1,6 @@
+[build]
+command = "cargo run"
+
 [[plugins]]
 package = "./.netlify"
 
@@ -9,8 +12,3 @@ forwards = {
     "git.kroltan.me" = "home.kroltan.me:3004",
     "stream.kroltan.me" = "home.kroltan.me:3005",
 }
-
-[[redirects]]
-from = "/"
-to = "/index.xml"
-status = 200
