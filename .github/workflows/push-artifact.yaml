@@ -12,7 +12,7 @@ jobs:
       - name: Install system dependencies
         run: apk add libxml2-dev libxslt-dev
       - name: Install Rust toolchain
-        uses: https://github.com/dtolnay/rust-toolchain@stable
+        uses: dtolnay/rust-toolchain@stable
       - uses: actions/cache@v5
         id: cache
         with:
