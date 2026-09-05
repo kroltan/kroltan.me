@@ -1,0 +1,222 @@
+
+:root {
+    box-sizing: border-box;
+    --main-width: 30cm;
+    --main-background: rgb(255, 255, 255);
+    --nav-background: rgb(231, 231, 231);
+    --monochrome-blend-mode: darken;
+    --background-blend-mode: soft-light;
+    font-family: "Fira", sans-serif;
+    color: black;
+    line-height: 1.75em;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    background: var(--nav-background);
+    position: relative;
+    margin: 0 2em;
+    overflow-x: hidden;
+}
+
+:target {
+    background: rgba(201, 139, 100, 0.22);
+}
+
+details {
+    appearance: none;
+}
+
+thead {
+    font-weight: bold;
+}
+
+h2:not(:first-of-type) {
+    margin-top: 1.5cm;
+}
+
+#background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1000;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+#background.loaded {
+    opacity: 0.5;
+}
+
+#about {
+    width: 7cm;
+    flex-shrink: 0;
+    position: sticky;
+    top: 0;
+    align-self: start;
+    mix-blend-mode: var(--monochrome-blend-mode);
+}
+
+main {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: content;
+    position: relative;
+    box-shadow: 0 0 10em rgba(0.5, 0.5, 0.5, 0.3);
+}
+
+main::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: var(--main-background);
+    mix-blend-mode: var(--background-blend-mode);
+}
+
+#about, main {
+    padding: 0.5cm 1cm;
+}
+
+#about table {
+    width: 100%;
+}
+
+p {
+    margin: 0 0 0.333cm 0;
+}
+
+a {
+    color: color-mix(in oklab, currentColor, 50% cornflowerblue);
+}
+
+a:visited {
+    color: color-mix(in oklab, currentColor, 50% purple);
+}
+
+article {
+    display: grid;
+    gap: 0 1em;
+    grid: "title extra"
+          / 1fr  auto;
+    align-items: start;
+    align-content: start;
+    padding: 0.5cm;
+}
+
+article h3 {
+    grid-area: title;
+}
+
+article .extra {
+    grid-area: extra;
+    text-align: right;
+    margin: 1.5em 0;
+}
+
+article > * {
+    grid-column: span 2;
+}
+
+.gallery {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, 315px);
+    justify-content: center;
+}
+
+.gallery a {
+    display: flex;
+    gap: 0.25cm;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery .emphasis {
+    grid-column: span 2;
+}
+
+.work, .projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15cm, 1fr));
+    
+    /* Hello, Firefox user! */
+    /* noinspection CssInvalidPropertyValue */
+    grid-template-rows: masonry;
+}
+
+.summary {
+    display: none;
+}
+
+@media screen and (max-width: 31cm) {
+    body {
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    #about {
+        position: relative;
+        width: unset;
+        align-self: unset;
+    }
+
+    #about img {
+        float: left;
+        margin-right: 1rem;
+    }
+
+    #about p {
+        clear: both;
+    }
+
+    #about table {
+        width: unset;
+        margin: 0 auto;
+    }
+    
+    .gallery .emphasis {
+        grid-column: unset;
+    }
+
+    .work, .projects {
+        grid-template-columns: 1fr;
+    }
+
+    article {
+        grid:
+            "title title"
+            "extra extra";
+    }
+    
+    article h3 {
+        margin-bottom: 0;
+    }
+    
+    article .extra {
+        margin-top: 0;
+        text-align: inherit;
+    }
+}
+
+@media (prefers-contrast: more), (prefers-reduced-motion: reduce) {
+    #background {
+        display: none;
+    }
+}

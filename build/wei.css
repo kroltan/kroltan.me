@@ -1,0 +1,92 @@
+@keyframes wei-bg {
+    0% {
+        color: transparent;
+        transform: translate(0, 0);
+        filter: blur(5em);
+    }
+
+    20% {
+        transform: translate(0, 0);
+    }
+    100% {
+        color: black;
+        filter: unset;
+    }
+}
+
+@keyframes wei-img {
+    0% {
+        opacity: 1;
+        filter: unset;
+    }
+    
+    20% {
+        filter: contrast(500%) blur(5em);
+    }
+    100% {
+        opacity: 0;
+        filter: contrast(1000%) brightness(0) blur(5em);
+    }
+}
+
+.wei {
+    position: relative;
+    animation: 5s linear both;
+}
+
+img.wei {
+    animation-name: wei-img;
+}
+
+.wei:has(img) {
+    background: red;
+}
+
+.wei:has(img)::after {
+    content: 
+        " WEI is Evil Google is Evil"
+        " WEI is Evil Google is Evil"
+        " WEI is Evil Google is Evil"
+        " WEI is Evil Google is Evil"
+        " WEI is Evil Google is Evil"
+        " WEI is Evil Google is Evil"
+        " WEI is Evil Google is Evil"
+        " WEI is Evil Google is Evil"
+        " WEI is Evil Google is Evil"
+        " WEI is Evil Google is Evil"
+        " WEI is Evil Google is Evil"
+        " WEI is Evil Google is Evil"
+        " WEI is Evil Google is Evil"
+        " WEI is Evil Google is Evil"
+        " WEI is Evil Google is Evil"
+        " WEI is Evil Google is Evil"
+        " WEI is Evil Google is Evil"
+        " WEI is Evil Google is Evil"
+        " WEI is Evil Google is Evil"
+        " WEI is Evil Google is Evil"
+        " WEI is Evil Google is Evil"
+        " WEI is Evil Google is Evil"
+        " WEI is Evil Google is Evil"
+        " WEI is Evil Google is Evil"
+        " WEI is Evil Google is Evil"
+        " WEI is Evil Google is Evil"
+        " WEI is Evil Google is Evil"
+        " WEI is Evil Google is Evil"
+        " WEI is Evil Google is Evil"
+        " WEI is Evil Google is Evil"
+        " WEI is Evil Google is Evil"
+        " WEI is Evil Google is Evil"
+        " WEI is Evil Google is Evil"
+        " WEI is Evil Google is Evil"
+        " WEI is Evil Google is Evil"
+        " WEI is Evil Google is Evil";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+    overflow: hidden;
+    animation: inherit;
+    animation-name: wei-bg;
+}
