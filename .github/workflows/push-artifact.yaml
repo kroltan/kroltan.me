@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - name: Install system dependencies
-        run: apk add libxml2-dev libxslt-dev
+        run: apt-get install libxml2-dev libxslt1-dev
       - name: Install Rust toolchain
         uses: dtolnay/rust-toolchain@stable
       - uses: actions/cache@v5
