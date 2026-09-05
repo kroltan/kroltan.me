@@ -7,6 +7,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v7
       - name: Install system dependencies
@@ -25,9 +27,14 @@ jobs:
         run: cargo run
       - name: Push to GitHub
         run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
           git show -s --format=%B HEAD > .commit.tmp
 
           git switch -c build
           git add -f build
           git commit -F .commit.tmp
-          git push
+      - uses: ad-m/github-push@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: build
