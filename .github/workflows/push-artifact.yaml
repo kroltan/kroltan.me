@@ -34,7 +34,7 @@ jobs:
           git switch -c build
           git add -f build
           git commit -F .commit.tmp
-      - uses: ad-m/github-push@v1
+      - uses: ad-m/github-push-action@v1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: build
