@@ -1,5 +1,5 @@
 [build]
-command = "cargo run"
+publish = "build"
 
 [[plugins]]
 package = "./.netlify"

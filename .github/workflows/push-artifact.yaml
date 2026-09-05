@@ -1,0 +1,33 @@
+name: Build and push artifacts to GitHub
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: alpine
+    steps:
+      - uses: actions/checkout@v7
+      - name: Install system dependencies
+        run: apk add libxml2-dev libxslt-dev
+      - name: Install Rust toolchain
+        uses: https://github.com/dtolnay/rust-toolchain@stable
+      - uses: actions/cache@v5
+        id: cache
+        with:
+          key: metadata
+          path: |
+            ~/.cargo/registry
+            ~/.cargo/git
+            ./target/
+      - name: Build website
+        run: cargo run
+      - name: Push to GitHub
+        run: |
+          git show -s --format=%B HEAD > .commit.tmp
+
+          git switch -c build
+          git add -f build
+          git commit -F .commit.tmp
+          git push
